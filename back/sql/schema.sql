@@ -1,8 +1,10 @@
 create table project(
   id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(100),
+  project_type VARCHAR(100),
   project_desc TEXT,
-  creation_date date
+  start_date date,
+  end_date date
 );
 
 create table image(
