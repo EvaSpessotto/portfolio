@@ -7,6 +7,8 @@ const projectsRouter = require('./routes/projects')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+// Pour stocker les images
+app.use(express.static('public'));
 
 // Home
 app.get('/', function (req, res) {

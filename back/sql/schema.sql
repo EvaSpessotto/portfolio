@@ -8,7 +8,7 @@ create table project(
 );
 
 create table image(
-  title VARCHAR(128),
+  name VARCHAR(128),
   path VARCHAR(250),
   project_id INTEGER NOT NULL
 );
