@@ -6,7 +6,7 @@ import { NavLink as RouterNavLink, Link } from 'react-router-dom';
 const Navigation = () => {
   return (
     <Navbar id="navbar" className="fixed-top">
-        <NavLink tag={RouterNavLink} to="/">Eva Spessotto</NavLink>
+        <NavLink tag={RouterNavLink} to="/" className="logo">Eva Spessotto</NavLink>
       <Nav>
         <NavItem>
           <NavLink tag={RouterNavLink} to="/a-propos">A propos</NavLink>

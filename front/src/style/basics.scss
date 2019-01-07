@@ -1,1 +1,15 @@
-$font: Arial;
+$font: Helvetica;
+$bold: 900;
+$blue: #00859B;
+$yellow: #FFB500;
+$red: #C60000;
+
+@keyframes rounded{
+  from {
+    border-radius: 0px;
+  }
+
+  to{
+    border-radius: 100px;
+  }
+} 

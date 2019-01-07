@@ -1,5 +1,12 @@
 @import './basics.scss';
 
 #navbar {
-
+  a{
+    font-family: $font;
+    font-weight: $bold;
+    color: black;
+  }
+  .logo{
+    font-size: 1.2em;
+  }
 }

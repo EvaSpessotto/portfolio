@@ -1,10 +1,42 @@
+@import 'basics.scss';
+
 #footer{
+  .line {
+    height: 10px;
+    background: black;
+    
+  }
   a{
     color: black;
-    transition: ease-in 0.2s;
-  }
-  :hover{
-    color: grey;
-    transition: ease-in 0.2s;
+    text-decoration: none;
+
+    span{
+      font-family: $font;
+      font-weight: $bold;
+    }
+
+    .github{
+      transition: ease-in-out 0.2s;
+      &:hover {
+        transition: ease-in 0.2s;
+        color: $blue;
+      }
+    } 
+
+    .behance{
+      transition: ease-in-out 0.2s;
+      &:hover {
+        transition: ease-in 0.2s;
+        color: $yellow;
+      }
+    } 
+
+    .linkedin{
+      transition: ease-in-out 0.2s;
+      &:hover {
+        transition: ease-in 0.2s;
+        color: $red;
+      }
+    } 
   }
 }

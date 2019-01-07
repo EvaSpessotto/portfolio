@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HomeContainer from './containers/HomeContainer';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import HomeContainer from './containers/HomeContainer';
+import Project from './components/Projects/Project';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <Navigation />
         <Switch>
           <Route exact path="/" component={HomeContainer}></Route>
+          <Route path="/project" component={Project}></Route>
         </Switch>
         <Footer />
       </div>
