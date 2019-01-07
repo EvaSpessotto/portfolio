@@ -6,15 +6,13 @@ import { NavLink as RouterNavLink, Link } from 'react-router-dom';
 const Navigation = () => {
   return (
     <Navbar id="navbar">
-      <NavbarBrand>
         <NavLink tag={RouterNavLink} to="/">Eva Spessotto</NavLink>
-      </NavbarBrand>
-      <Nav >
+      <Nav>
         <NavItem>
-          <NavLink>A propos</NavLink>
+          <NavLink tag={RouterNavLink} to="/a-propos">A propos</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink>Contact</NavLink>
+          <NavLink tag={RouterNavLink} to="/contact">Contact</NavLink>
         </NavItem>
       </Nav>
 
