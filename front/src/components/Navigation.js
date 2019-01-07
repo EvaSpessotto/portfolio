@@ -5,7 +5,7 @@ import { NavLink as RouterNavLink, Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <Navbar id="navbar">
+    <Navbar id="navbar" className="fixed-top">
         <NavLink tag={RouterNavLink} to="/">Eva Spessotto</NavLink>
       <Nav>
         <NavItem>
