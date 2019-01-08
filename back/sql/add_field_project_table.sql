@@ -1,0 +1,1 @@
+ALTER TABLE project ADD cover_img VARCHAR(250);

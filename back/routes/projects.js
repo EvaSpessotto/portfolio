@@ -4,14 +4,14 @@ const router = express.Router();
 const db = require('../sql/config');
 
 router.get('/', (req, res) => {
-  db.query('SELECT id, title, project_type from project', (err, projects) => {
+  db.query('SELECT id, title, project_type, cover_img from project', (err, projects) => {
     if(err) {
       return res.status(500).json({
         error: err.message,
         detail: err.sql
       });
     }
-    res.json(projects)
+    res.status(200).json(projects)
   })
 })
 
@@ -34,7 +34,6 @@ router.get('/:id', (req, res) => {
       project.images = images
       res.status(200).json(project)
     })
-    
   });
 })
 

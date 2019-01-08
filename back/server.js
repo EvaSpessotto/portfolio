@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Pour stocker les images
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 // Home
 app.get('/', function (req, res) {
