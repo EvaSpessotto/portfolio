@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import HomeContainer from './containers/HomeContainer';
 import Project from './components/Projects/Project';
 
-class App extends Component {
+class App extends Component {  
   render() {
     return (
       <div> 

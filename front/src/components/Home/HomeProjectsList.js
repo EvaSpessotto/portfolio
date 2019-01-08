@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 import '../../style/projectsList.scss';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
-import {WOW} from 'wowjs/dist/wow';
 
 class HomeProjectsList extends Component {
-
-  componentDidMount() {
-    new WOW().init()
-    }
 
   render() {
     return (

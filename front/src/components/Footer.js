@@ -12,9 +12,15 @@ const Footer = () => {
       </Row>
       <Row>
         <Col className="text-center my-3">
-          <a href="https://github.com/EvaSpessotto"><span className="github">Github</span></a>
-          <a href="https://www.behance.net/evaspessotto"><span className="mx-5 behance">Behance</span></a>
-          <a href="https://www.linkedin.com/in/eva-spessotto/"><span className="linkedin">Linkedin</span></a>
+          <a href="https://github.com/EvaSpessotto" target="_blank" rel="noopener noreferrer">
+            <span className="github">Github</span>
+          </a>
+          <a href="https://www.behance.net/evaspessotto" target="_blank" rel="noopener noreferrer">
+            <span className="mx-5 behance">Behance</span>
+          </a>
+          <a href="https://www.linkedin.com/in/eva-spessotto/" target="_blank" rel="noopener noreferrer">
+            <span className="linkedin">Linkedin</span>
+          </a>
         </Col>
       </Row>
     </Container>

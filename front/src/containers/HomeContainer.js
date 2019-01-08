@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import { fetchProjects, fetchProjectsSuccess, fetchProjectsError } from '../actions';
 import { connect } from 'react-redux';
@@ -6,9 +6,7 @@ import HomePres from '../components/Home/HomePres';
 import HomeProjectsList from '../components/Home/HomeProjectsList';
 
 class HomeContainer extends Component {
-  constructor(props){
-    super(props)
-  }
+
   componentDidMount() {
     this.props.fetchProjects();
     axios.get('/api/projects')

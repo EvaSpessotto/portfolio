@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import '../../style/project.scss';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 const Project = () => {
   return (
@@ -91,7 +91,7 @@ const Project = () => {
       <Container className="project-links">
         <Row>
           <Col className="d-flex justify-content-center ">
-            {/* <h4 className="mr-3">Liens relatifs au projet: </h4> */}
+            <h4 className="mr-3">Liens relatifs au projet: </h4>
             <a href="https://github.com"><i className="fab fa-github-square fa-3x mr-3"></i></a>
             <a href="https://github.com"><i className="fas fa-link fa-3x"></i></a>
           </Col>

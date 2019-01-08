@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../../style/homePres.scss';
 import { Container, Row, Col } from 'reactstrap';
 
