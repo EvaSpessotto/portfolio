@@ -5,8 +5,16 @@
     font-family: $font;
     font-weight: $bold;
     color: black;
-  }
+    transition: 0.2s ease-in-out;
+    &:hover{
+      color: white;
+      transition: 0.2s ease-in-out;
+    }
+  } 
+
   .logo{
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
+
+
 }

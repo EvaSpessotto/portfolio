@@ -28,7 +28,6 @@ const HomePres = () => {
           </Container>
         </Col>
       </Row>
-      
     </Container>
   )
 }

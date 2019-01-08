@@ -6,15 +6,15 @@ const Footer = () => {
   return (
     <Container id="footer" className="mt-5" fluid>
       <Row className="d-flex justify-content-center">
-        <Col lg="3">
+        <Col lg="4">
           <div className="line"></div>
         </Col>
       </Row>
       <Row>
-        <Col className="text-center mb-5 mt-3">
-          <a href=""><span className="github">Github</span></a>
-          <a href=""><span className="mx-5 behance">Behance</span></a>
-          <a href=""><span className="linkedin">Linkedin</span></a>
+        <Col className="text-center my-3">
+          <a href="https://github.com/EvaSpessotto"><span className="github">Github</span></a>
+          <a href="https://www.behance.net/evaspessotto"><span className="mx-5 behance">Behance</span></a>
+          <a href="https://www.linkedin.com/in/eva-spessotto/"><span className="linkedin">Linkedin</span></a>
         </Col>
       </Row>
     </Container>

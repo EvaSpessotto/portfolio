@@ -6,13 +6,16 @@ import HomePres from '../components/Home/HomePres';
 import HomeProjectsList from '../components/Home/HomeProjectsList';
 
 class HomeContainer extends Component {
-
+  constructor(props){
+    super(props)
+  }
   componentDidMount() {
     this.props.fetchProjects();
     axios.get('/api/projects')
     .then(res => res.data)
     .then(projects => this.props.fetchProjectsSuccess(projects))
     .catch(error => this.props.fetchProjectsError(error.response.data))
+
   }
 
   render() {

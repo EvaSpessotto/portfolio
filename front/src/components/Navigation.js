@@ -9,10 +9,10 @@ const Navigation = () => {
         <NavLink tag={RouterNavLink} to="/" className="logo">Eva Spessotto</NavLink>
       <Nav>
         <NavItem>
-          <NavLink tag={RouterNavLink} to="/a-propos">A propos</NavLink>
+          <NavLink tag={RouterNavLink} to="/a-propos" className="a-propos">A propos</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink tag={RouterNavLink} to="/contact">Contact</NavLink>
+          <NavLink tag={RouterNavLink} to="/contact" className="contact">Contact</NavLink>
         </NavItem>
       </Nav>
 
