@@ -7,6 +7,7 @@ import HomeProjectsList from '../components/Home/HomeProjectsList';
 
 
 class HomeContainer extends Component {
+  
   componentDidMount() {
     this.props.fetchProjects();
     axios.get('/api/projects')

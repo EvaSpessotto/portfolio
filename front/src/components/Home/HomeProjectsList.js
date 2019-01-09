@@ -10,7 +10,7 @@ class HomeProjectsList extends Component {
     new WOW.WOW({
         live: false
     }).init();
-}
+  }
 
   render() {
 
