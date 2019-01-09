@@ -22,7 +22,7 @@ class HomeProjectsList extends Component {
               const { cover_img, title, id } = project;
               return(
                 <Col lg="4" md="6" sm="12" className="d-flex justify-content-center" key={key}>
-                  <Link to={`/${id}`}>
+                  <Link to={`/project/${id}`}>
                       <img src={cover_img} className="mb-5 img-fluid rounded-circle wow fadeInUp" alt={title} />
                   </Link>
                 </Col>

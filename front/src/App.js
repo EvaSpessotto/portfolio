@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import HomeContainer from './containers/HomeContainer';
 import ProjectContainer from './containers/ProjectContainer';
+import About from './components/About/About';
 
 class App extends Component {  
 
@@ -12,8 +13,9 @@ class App extends Component {
       <div> 
         <Navigation />
         <Switch>
-          <Route exact path="/" component={HomeContainer}></Route>
-          <Route path="/:id" component={ProjectContainer}></Route>
+          <Route exact path="/" component={HomeContainer} />
+          <Route path="/project/:id" component={ProjectContainer} />
+          <Route path="/a-propos" component={About} />
         </Switch>
         <Footer />
       </div>
