@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import HomeContainer from './containers/HomeContainer';
 import ProjectContainer from './containers/ProjectContainer';
 import About from './components/About/About';
+import ContactContainer from './containers/ContactContainer';
 
 class App extends Component {  
 
@@ -16,6 +17,8 @@ class App extends Component {
           <Route exact path="/" component={HomeContainer} />
           <Route path="/project/:id" component={ProjectContainer} />
           <Route path="/a-propos" component={About} />
+          <Route path="/contact" component={ContactContainer} />
+          <Route component="404 not found" />
         </Switch>
         <Footer />
       </div>

@@ -1,0 +1,89 @@
+@import 'basics';
+
+#contact-links{
+  margin-top: 15%;
+
+  h2{
+    font-family: $font;
+    font-weight: $bold;
+    color: black;
+    font-size: 2.2em;
+  }
+
+  .line{
+    @extend %line;
+  }
+
+  .github{
+    color: $blue;
+    &:hover{
+      @include animate(icon-bounce, 0.5s, alternate);
+    }
+  }
+
+  .behance{
+    color: $yellow;
+    &:hover{
+      @include animate(icon-bounce, 0.5s, alternate);
+    }
+  }
+
+  .linkedin{
+    color: $red;
+    &:hover{
+      @include animate(icon-bounce, 0.5s, alternate);
+    }
+  }
+}
+
+#contact-form{
+  margin-top: 10%;
+  margin-bottom: 10%;
+
+  h2{
+    font-family: $font;
+    font-weight: $bold;
+    color: black;
+    font-size: 2.2em;
+  }
+
+  .line{
+    @extend %line;
+  }
+
+
+  .form-group{
+    :focus{
+      border-color: $red;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    label{
+      font-family: $font;
+      font-weight: $bold;
+      font-size: 1.2em;
+    }
+
+    input , textarea{
+      border-bottom: solid black 5px;
+    }
+
+  }
+
+  .submit-btn{
+    color: white;
+    background-color: black;
+    font-family: $font;
+    font-weight: $bold;
+    font-size: 1.2em;
+    padding: 10px 30px 10px 30px;
+    border: none;
+    transition: 0.2s ease-in-out;
+    &:hover{
+      transform: scale(0.9);
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+    }
+  }
+}

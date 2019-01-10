@@ -10,15 +10,15 @@
     font-weight: 900;
     color: black;
   }
+
   @media (max-width: $sm) { 
     #home-message{
       font-size: 2em;
     }
-   }
+  }
 
   .line{
-    height: 10px;
-    background-color: black;
+    @extend %line;
   }
 
   .animated-squares{

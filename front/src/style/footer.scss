@@ -2,9 +2,7 @@
 
 #footer{
   .line {
-    height: 10px;
-    background: black;
-    
+    @extend %line;
   }
   a{
     color: black;

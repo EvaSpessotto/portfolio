@@ -27,8 +27,8 @@
     }
     
     .line{
-      height: 10px;
-      background: white;
+      @extend %line;
+      background-color: white;
     }
   }
 
@@ -43,8 +43,8 @@
   }
 
   .line{
-    height: 10px;
-    background: black;
+    @extend %line;
+    
   }
   
   .project-links{
