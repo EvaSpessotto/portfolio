@@ -1,6 +1,14 @@
 import React from 'react';
 import '../../style/about.scss';
 import { Container, Row , Col } from 'reactstrap';
+import styled, { keyframes } from 'styled-components';
+import { fadeIn, bounce, fadeInDown } from 'react-animations';
+
+const fadeAnimation = keyframes`${fadeInDown}`;
+
+const FadeDiv = styled.div`
+  animation: 1s ${fadeAnimation};
+`;
 
 const About = () => {
   const links = {
@@ -13,6 +21,7 @@ const About = () => {
 
   }
   return (
+    <FadeDiv>
     <Container id="about">
       <Row>
         <Col lg="6" xs="12" className="header-about">
@@ -49,6 +58,7 @@ const About = () => {
         </Col>
       </Row>
     </Container>
+    </FadeDiv>
   )
 }
 

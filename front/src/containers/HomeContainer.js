@@ -4,6 +4,7 @@ import { fetchProjects, fetchProjectsSuccess, fetchProjectsError } from '../acti
 import { connect } from 'react-redux';
 import HomePres from '../components/Home/HomePres';
 import HomeProjectsList from '../components/Home/HomeProjectsList';
+import { FadeInDiv } from '../Data/styledComponents';
 
 
 class HomeContainer extends Component {
@@ -18,10 +19,10 @@ class HomeContainer extends Component {
 
   render() {
     return (
-      <div>
+      <FadeInDiv>
         <HomePres />
         <HomeProjectsList />
-      </div>
+      </FadeInDiv>
     );
   }
 }

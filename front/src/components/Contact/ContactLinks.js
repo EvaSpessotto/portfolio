@@ -7,13 +7,13 @@ const ContactLinks = () => {
   return (
     <Container id="contact-links">
       <Row >
-        <Col lg="6" className="offset-3">
-          <h2>Retrouvez-moi sur les réseaux</h2>
+        <Col lg="6" className="offset-lg-3">
+          <h2>Retrouvez-moi sur les réseaux...</h2>
           <div className="line"></div>
         </Col>
       </Row>
       <Row className="mt-4">
-        <Col className="offset-3">
+        <Col className="offset-lg-3">
           {
             socialLinks.map((socialLink, key) => {
               const { link, icon } = socialLink;

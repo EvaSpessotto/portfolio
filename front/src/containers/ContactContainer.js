@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import ContactLinks from '../components/Contact/ContactLinks';
 import ContactForm from '../components/Contact/ContactForm';
+import { FadeDownDiv } from '../Data/styledComponents';
+
 
 class ContactContainer extends Component {
   render() {
     return (
       <div>
-        <ContactLinks />
-        <ContactForm />
+        <FadeDownDiv>
+          <ContactLinks />
+        </FadeDownDiv>
+
+        <FadeDownDiv>
+          <ContactForm />
+        </FadeDownDiv>
       </div>
     );
   }
