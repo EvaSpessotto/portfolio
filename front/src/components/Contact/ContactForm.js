@@ -7,17 +7,15 @@ const ContactForm = () => {
     <Container id="contact-form">
       <Row>
         <Col lg="6" className="offset-lg-3">
-          
-            <h2>...ou laissez-moi un message !</h2>
-            <div className="line"></div>
-          
+          <h2>...ou laissez-moi un message !</h2>
+          <div className="line"></div>
         </Col>
       </Row>
       <Row className="mt-4">
         <Col lg="6"  className="offset-lg-3">
           <Form>
-            <FormGroup>
-              <Label for="name" >nom</Label>
+            <FormGroup className="name blue mt-4">
+              <Label for="name">nom</Label>
               <Input 
                 type="text" 
                 name="name" 
@@ -25,8 +23,8 @@ const ContactForm = () => {
               />
             </FormGroup>
 
-            <FormGroup>
-            <Label for="email" className="hello">email</Label>
+            <FormGroup className="red">
+              <Label for="email" >email</Label>
               <Input 
                 type="email" 
                 name="email" 
@@ -34,21 +32,21 @@ const ContactForm = () => {
               />
             </FormGroup>
      
-            <FormGroup >
+            <FormGroup className="yellow">
               <Label for="subject" >sujet ?</Label>
               <Input 
                 type="text" 
                 name="subject" 
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
-              
             </FormGroup>
-            <FormGroup>
-              <Label for="message" className="mt-5">message</Label>
+
+            <FormGroup className="blue">
+              <Label for="message" >message</Label>
               <Input 
                 type="textarea" 
                 name="message" 
-                // rows="8"
+                rows="8"
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
