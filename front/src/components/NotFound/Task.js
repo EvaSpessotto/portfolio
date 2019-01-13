@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
+import '../../style/notFound.scss';
 
 const Container = styled.div`
-  border: 1px solid lightgrey;
-  padding: 8px;
-  margin-right: 8px;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 100%;
+  color: blue;
+  height: 100%;
 `;
 
 class Task extends Component {
@@ -25,6 +24,7 @@ class Task extends Component {
             ref={provided.innerRef}
               {...provided.draggableProps}
               {...provided.dragHandleProps}
+              className={`circle ${this.props.task.color}`}
             >
               {this.props.task.content[0]}
             </Container>

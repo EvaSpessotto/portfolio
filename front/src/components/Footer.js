@@ -1,11 +1,11 @@
 import React from 'react';
 import '../style/footer.scss';
 import { Container, Row, Col } from 'reactstrap';
-import socialLinks from '../Data/socialLinks';
+import socialLinks from '../data/socialLinks';
 
 const Footer = () => {
   return (
-    <Container id="footer" className="mt-5" fluid>
+    <Container id="footer" fluid>
       <Row className="d-flex justify-content-center">
         <Col lg="4">
           <div className="line"></div>

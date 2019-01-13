@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ContactLinks from '../components/Contact/ContactLinks';
 import ContactForm from '../components/Contact/ContactForm';
-import { FadeDownDiv } from '../Data/styledComponents';
+import { FadeDownDiv } from '../data/styledComponents';
 
 
 class ContactContainer extends Component {

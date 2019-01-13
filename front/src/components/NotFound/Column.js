@@ -1,34 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { Col } from 'reactstrap';
 import styled from 'styled-components';
 import { Droppable } from 'react-beautiful-dnd';
 import Task from './Task';
 
-const Container = styled.div`
-  margin: 8px;
-  border: 1px solid lightgrey;
-  border-radius: 2px;
-  display: flex;
-  flex-direction: column;
-  height: 300px;
 
-  display: flex;
-  flex-direction: column;
-`;
-
-const Title = styled.h3`
-  padding: 8px;
-`;
 const TaskList = styled.div`
-  padding: 8px;
   display: flex;
-  min-height: 100px;
+  width: 100%;
 `;
 
 class Column extends Component {
   render() {
     return (
-      <Container>
-        <Title>{this.props.column.title}</Title>
         <Droppable droppableId={this.props.column.id} direction="horizontal">
           {
             provided => (
@@ -36,16 +20,19 @@ class Column extends Component {
                 ref={provided.innerRef}
                 {...provided.droppableProps}
               >
-                {this.props.tasks.map((task, index) => 
-                  <Task key={task.id} task={task} index={index} />
-                )}
+                {
+                  this.props.tasks.map((task, index) => 
+                      <Col className="m-0 p-0" md="3">
+                        <Task key={task.id} task={task} index={index} />
+                      </Col>
+                  )
+                
+                }
                 {provided.placeholder}
               </TaskList>
             )
           }
         </Droppable>
-      </Container>
-      
     );
   }
 }

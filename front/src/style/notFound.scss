@@ -3,37 +3,43 @@
 
 
 #not-found{
+  margin-top: 7%;
+  height:100%; 
+  position:relative; 
+  padding-bottom:100px;
 
-  %circle{
-    width: 100%;
-    border-radius: 100%;
-    transition: 0.2S ease-in-out;
+  h1{
+    font-family: $font;
+    font-weight: $bold;
+    font-size: 4em;
   }
 
-  %circle:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
+  h2{
+    font-family: $font;
+    font-weight: $bold;
   }
-
-  .black{
-    @extend %circle;
+  
+  h4{
+    font-family: $font;
+    font-size: 1em;
+  }
+  .circle.black{
     background-color: black;
+    color: black;
   }
-
-  .blue{
-    @extend %circle;
+  
+  .circle.blue{
     background-color: $blue;
+    color: $blue;
   }
-
-  .yellow{
-    @extend %circle;
-    background-color: $yellow;
-  }
-
-  .red{
-    @extend %circle;
+  
+  .circle.red{
     background-color: $red;
+    color: $red;
   }
-
+  
+  .circle.yellow{
+    background-color: $yellow;
+    color: $yellow;
+  }
 }

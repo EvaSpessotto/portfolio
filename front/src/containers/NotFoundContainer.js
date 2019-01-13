@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
-import styled from 'styled-components'
+import { Container, Row, Col } from 'reactstrap';
 import initialData from '../data/initialData';
 import Column from '../components/NotFound/Column'
 
 
-const Container = styled.div`
-  
-`;
 class NotFoundContainer extends Component {
   state = initialData;
   onDragEnd = result => {
@@ -72,24 +69,29 @@ class NotFoundContainer extends Component {
       },
     };
     this.setState(newState);
-
-
-
   };
 
 
-
   render() {
-
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
-        <Container>
-          {this.state.columnOrder.map(columnId => {
-            const column = this.state.columns[columnId];
-            const tasks = column.taskIds.map(taskId => this.state.tasks[taskId])
+        <Container id="not-found">
+          <Row className="text-center mb-5">
+            <Col>
+              <h1>404</h1>
+              <h2>Désolée, la page que vous cherchez n'existe pas !</h2>
+              <h4>Néanmoins, vous pouvez vous amuser avec les cercles ci-dessous</h4>
+            </Col>
+          </Row>
+          <Row style={{minHeight: '280px'}}>
+            {this.state.columnOrder.map(columnId => {
+              const column = this.state.columns[columnId];
+              const tasks = column.taskIds.map(taskId => this.state.tasks[taskId])
 
-            return <Column key={column.id} column={column} tasks={tasks} />;
-          })}
+              return <Column key={column.id} column={column} tasks={tasks} />;
+            })}
+          </Row>
+         
         </Container>
       </DragDropContext>
     );
