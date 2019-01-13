@@ -1,5 +1,18 @@
 @import 'basics';
 
+@mixin animated(
+  $time: 500ms,
+  $fillmode: both,
+  $count: 1) {
+  animation-duration: $time;
+  animation-fill-mode: $fillmode;
+  animation-iteration-count: $count;
+}
+
+
+$bezier: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$time: 300ms;
+
 #contact-links{
   margin-top: 15%;
 
@@ -89,8 +102,10 @@
     input , textarea{
       border-bottom: solid black 5px;
     }
-   
+
   }
+
+
 
   .submit-btn{
     color: white;

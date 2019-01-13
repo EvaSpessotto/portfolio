@@ -28,7 +28,7 @@ const ContactForm = () => {
               <Input 
                 type="email" 
                 name="email" 
-                className="border-top-0 border-right-0 border-left-0 rounded-0 p-0 write"
+                className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
      
