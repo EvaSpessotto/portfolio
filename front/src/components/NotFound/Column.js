@@ -9,6 +9,10 @@ const Container = styled.div`
   border-radius: 2px;
   display: flex;
   flex-direction: column;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
 `;
 
 const Title = styled.h3`
@@ -17,12 +21,13 @@ const Title = styled.h3`
 const TaskList = styled.div`
   padding: 8px;
   display: flex;
+  min-height: 100px;
 `;
 
 class Column extends Component {
   render() {
     return (
-      <Container style={{marginTop: '100px'}}>
+      <Container>
         <Title>{this.props.column.title}</Title>
         <Droppable droppableId={this.props.column.id} direction="horizontal">
           {
