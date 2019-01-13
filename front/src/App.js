@@ -6,7 +6,6 @@ import HomeContainer from './containers/HomeContainer';
 import ProjectContainer from './containers/ProjectContainer';
 import About from './components/About/About';
 import ContactContainer from './containers/ContactContainer';
-// import NotFound from './components/NotFound';
 import NotFoundContainer from './containers/NotFoundContainer';
 
 class App extends Component {  

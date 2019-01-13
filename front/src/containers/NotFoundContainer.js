@@ -86,7 +86,7 @@ class NotFoundContainer extends Component {
               </Col>
             </Row>
           </FadeInDiv>
-          <Row style={{minHeight: '280px'}}>
+          <Row style={{minHeight: '280px', marginTop: '100px'}}>
             {this.state.columnOrder.map(columnId => {
               const column = this.state.columns[columnId];
               const tasks = column.taskIds.map(taskId => this.state.tasks[taskId])
