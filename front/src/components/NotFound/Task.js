@@ -5,8 +5,14 @@ import { Draggable } from 'react-beautiful-dnd';
 const Container = styled.div`
   border: 1px solid lightgrey;
   padding: 8px;
-  margin-bottom: 8px;
-  border-radius: 2px;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 class Task extends Component {
@@ -20,7 +26,7 @@ class Task extends Component {
               {...provided.draggableProps}
               {...provided.dragHandleProps}
             >
-              {this.props.task.content}
+              {this.props.task.content[0]}
             </Container>
           )
         }

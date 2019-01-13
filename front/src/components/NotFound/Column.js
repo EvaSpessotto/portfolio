@@ -7,6 +7,8 @@ const Container = styled.div`
   margin: 8px;
   border: 1px solid lightgrey;
   border-radius: 2px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Title = styled.h3`
@@ -14,6 +16,7 @@ const Title = styled.h3`
 `;
 const TaskList = styled.div`
   padding: 8px;
+  display: flex;
 `;
 
 class Column extends Component {
@@ -21,7 +24,7 @@ class Column extends Component {
     return (
       <Container style={{marginTop: '100px'}}>
         <Title>{this.props.column.title}</Title>
-        <Droppable droppableId={this.props.column.id}>
+        <Droppable droppableId={this.props.column.id} direction="horizontal">
           {
             provided => (
               <TaskList
