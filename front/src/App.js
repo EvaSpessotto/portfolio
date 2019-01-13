@@ -6,8 +6,8 @@ import HomeContainer from './containers/HomeContainer';
 import ProjectContainer from './containers/ProjectContainer';
 import About from './components/About/About';
 import ContactContainer from './containers/ContactContainer';
-import NotFound from './components/NotFound';
-import Test from './components/Test';
+// import NotFound from './components/NotFound';
+import NotFoundContainer from './containers/NotFoundContainer';
 
 class App extends Component {  
 
@@ -20,8 +20,7 @@ class App extends Component {
           <Route path="/project/:id" component={ProjectContainer} />
           <Route path="/a-propos" component={About} />
           <Route path="/contact" component={ContactContainer} />
-          <Route component={NotFound} />
-          <Route exact path="/test" component={Test} />
+          <Route component={NotFoundContainer} />
         </Switch>
         <Footer />
       </div>
