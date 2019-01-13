@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
 import '../../style/notFound.scss';
+import { BounceDiv } from '../../data/styledComponents';
 
 const Container = styled.div`
   display: flex;
@@ -26,7 +27,9 @@ class Task extends Component {
               {...provided.dragHandleProps}
               className={`circle ${this.props.task.color}`}
             >
+              <BounceDiv>
               {this.props.task.content[0]}
+              </BounceDiv>
             </Container>
           )
         }

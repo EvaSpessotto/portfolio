@@ -3,6 +3,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import { Container, Row, Col } from 'reactstrap';
 import initialData from '../data/initialData';
 import Column from '../components/NotFound/Column'
+import { FadeInDiv } from '../data/styledComponents';
 
 
 class NotFoundContainer extends Component {
@@ -76,18 +77,20 @@ class NotFoundContainer extends Component {
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
         <Container id="not-found">
-          <Row className="text-center mb-5">
-            <Col>
-              <h1>404</h1>
-              <h2>Désolée, la page que vous cherchez n'existe pas !</h2>
-              <h4>Néanmoins, vous pouvez vous amuser avec les cercles ci-dessous</h4>
-            </Col>
-          </Row>
+          <FadeInDiv>
+            <Row className="text-center mb-5">
+              <Col>
+                <h1>404</h1>
+                <h2>Désolée, la page que vous cherchez n'existe pas !</h2>
+                <h4>Néanmoins, vous pouvez vous amuser avec les cercles ci-dessous <i className="far fa-smile"></i></h4>
+              </Col>
+            </Row>
+          </FadeInDiv>
           <Row style={{minHeight: '280px'}}>
             {this.state.columnOrder.map(columnId => {
               const column = this.state.columns[columnId];
               const tasks = column.taskIds.map(taskId => this.state.tasks[taskId])
-
+              
               return <Column key={column.id} column={column} tasks={tasks} />;
             })}
           </Row>
