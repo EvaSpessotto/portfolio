@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import '../style/notFound.scss';
-import Draggable from 'react-draggable';
 
 class NotFound extends Component {
   render() {
     
     return (
-      
       <Container id="not-found">
       
         <Row className="text-center" style={{marginTop: "150px"}}>
@@ -20,14 +18,10 @@ class NotFound extends Component {
         <Container style={{width:"50%"}}>
           <Row >
             <Col lg="4">
-              <Draggable>
                 <div className="circle red"></div>
-              </Draggable>
             </Col>
             <Col lg="4">
-              <Draggable>
               <div className="circle blue"></div>
-              </Draggable>
             </Col>
             <Col lg="4">
               <div className="circle yellow"></div>
