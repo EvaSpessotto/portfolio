@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../style/contact.scss';
 import { Container, Row, Col } from 'reactstrap';
-import socialLinks from '../../Data/socialLinks';
+import socialLinks from '../../data/socialLinks';
 
 const ContactLinks = () => {
   return (
