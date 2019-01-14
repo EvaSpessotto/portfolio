@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style/footer.scss';
 import { Container, Row, Col } from 'reactstrap';
+import socialLinks from '../Data/socialLinks';
 
 const Footer = () => {
   return (
@@ -12,15 +13,15 @@ const Footer = () => {
       </Row>
       <Row>
         <Col className="text-center my-3">
-          <a href="https://github.com/EvaSpessotto" target="_blank" rel="noopener noreferrer">
-            <span className="github">Github</span>
-          </a>
-          <a href="https://www.behance.net/evaspessotto" target="_blank" rel="noopener noreferrer">
-            <span className="mx-5 behance">Behance</span>
-          </a>
-          <a href="https://www.linkedin.com/in/eva-spessotto/" target="_blank" rel="noopener noreferrer">
-            <span className="linkedin">Linkedin</span>
-          </a>
+          {
+            socialLinks.map((link, key) => {
+              return(
+              <a href={link.link} key={key} target="_blank" rel="noopener noreferrer">
+                <span className={`${link.class} mx-3`}>{link.name}</span>
+              </a>
+              )
+            })
+          }
         </Col>
       </Row>
     </Container>

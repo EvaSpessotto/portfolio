@@ -1,9 +1,16 @@
 $font: Helvetica;
 $bold: 900;
+
 $blue: #00859B;
 $yellow: #FFB500;
 $red: #C60000;
 
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+// Animation carrés Home
 @keyframes rounded{
   from {
     border-radius: 0px;
@@ -13,3 +20,36 @@ $red: #C60000;
     border-radius: 100px;
   }
 } 
+// Animation carrés Home
+
+%line {
+  height: 10px;
+  background: black;
+}
+
+// Animation icones page Contact
+@mixin animate($animation-name, $time, $style) {
+  -webkit-animation: $animation-name $time $style;
+  -moz-animation:    $animation-name $time $style;
+  -o-animation:      $animation-name $time $style;
+  animation:         $animation-name $time $style;
+}
+
+@keyframes icon-bounce {
+  0%, 100% {
+     transform:(rotate(0deg));
+  }
+  25% {
+    transform:(rotate(15deg));
+  }
+  50% {
+    transform:(rotate(-15deg));
+  }
+  75% {
+    transform:(rotate(5deg));
+  }
+  85% {
+    transform:(rotate(-5deg));
+  }
+}
+// Animation icones page Contact

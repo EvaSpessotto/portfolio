@@ -3,7 +3,8 @@ import { Container, Row, Col } from 'reactstrap';
 import '../../style/project.scss';
 import { Parallax } from 'react-parallax';
 
-const Project = () => {
+const Project = (singleProject) => {
+  console.log(singleProject)
   return (
     <div id="project">
       <Container className="m-0 header" fluid>
@@ -15,7 +16,7 @@ const Project = () => {
                 strength={600}
               >
                 <div style={{ height: '400px' }} />
-                <h1 id="title" className="mb-5">Wildhub</h1>
+                <h1 id="title" className="mb-5">title</h1>
             </Parallax>
           </Col>
         </Row>
@@ -101,4 +102,4 @@ const Project = () => {
   )
 }
 
-export default Project;
+export default (Project);

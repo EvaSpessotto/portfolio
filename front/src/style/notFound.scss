@@ -1,0 +1,39 @@
+
+@import 'basics';
+
+
+#not-found{
+
+  %circle{
+    width: 100%;
+    border-radius: 100%;
+    transition: 0.2S ease-in-out;
+  }
+
+  %circle:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .black{
+    @extend %circle;
+    background-color: black;
+  }
+
+  .blue{
+    @extend %circle;
+    background-color: $blue;
+  }
+
+  .yellow{
+    @extend %circle;
+    background-color: $yellow;
+  }
+
+  .red{
+    @extend %circle;
+    background-color: $red;
+  }
+
+}
