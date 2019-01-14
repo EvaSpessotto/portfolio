@@ -1,0 +1,41 @@
+
+@import 'basics';
+
+
+#not-found{
+  margin-top: 10%;
+  h1{
+    font-family: $font;
+    font-weight: $bold;
+    font-size: 4em;
+  }
+
+  h2{
+    font-family: $font;
+    font-weight: $bold;
+  }
+  
+  h4{
+    font-family: $font;
+    font-size: 1em;
+  }
+  .circle.black{
+    background-color: black;
+    color: black;
+  }
+  
+  .circle.blue{
+    background-color: $blue;
+    color: $blue;
+  }
+  
+  .circle.red{
+    background-color: $red;
+    color: $red;
+  }
+  
+  .circle.yellow{
+    background-color: $yellow;
+    color: $yellow;
+  }
+}

@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import HomeContainer from './containers/HomeContainer';
+import ProjectContainer from './containers/ProjectContainer';
+import About from './components/About/About';
+import ContactContainer from './containers/ContactContainer';
+import NotFoundContainer from './containers/NotFoundContainer';
+import './style/app.scss';
 
-class App extends Component {
+class App extends Component {  
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="App" className="d-flex flex-column"> 
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={HomeContainer} />
+          <Route path="/project/:id" component={ProjectContainer} />
+          <Route path="/a-propos" component={About} />
+          <Route path="/contact" component={ContactContainer} />
+          <Route component={NotFoundContainer} />
+        </Switch>
+        <Footer />
       </div>
+      
     );
   }
 }
