@@ -24,7 +24,7 @@ class Column extends Component {
               >
                 {
                   this.props.tasks.map((task, index) => 
-                      <Col className="m-0 p-0" md="3">
+                      <Col className="m-0 p-0" md="1">
                         <BounceDiv>
                           <Task key={task.id} task={task} index={index} />
                         </BounceDiv>

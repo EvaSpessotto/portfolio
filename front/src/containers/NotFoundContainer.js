@@ -75,18 +75,18 @@ class NotFoundContainer extends Component {
 
   render() {
     return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        <Container id="not-found">
+      <DragDropContext onDragEnd={this.onDragEnd} >
+        <Container id="not-found" className="flex-grow-1 ">
           <FadeInDiv>
             <Row className="text-center mb-5">
               <Col>
                 <h1>404</h1>
                 <h2>Désolée, la page que vous cherchez n'existe pas !</h2>
-                <h4>Néanmoins, vous pouvez vous amuser avec les cercles ci-dessous <i className="far fa-smile"></i></h4>
+                <h4>Néanmoins, vous pouvez vous amuser avec les ronds ci-dessous<i className="far fa-smile"></i></h4>
               </Col>
             </Row>
           </FadeInDiv>
-          <Row style={{minHeight: '280px', marginTop: '100px'}}>
+          <Row style={{ marginTop: '80px'}}>
             {this.state.columnOrder.map(columnId => {
               const column = this.state.columns[columnId];
               const tasks = column.taskIds.map(taskId => this.state.tasks[taskId])
