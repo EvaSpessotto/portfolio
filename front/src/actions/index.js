@@ -8,6 +8,7 @@ export const FETCH_SINGLE_PROJECT = 'FETCH_SINGLE_PROJECT';
 export const FETCH_SINGLE_PROJECT_SUCCESS = 'FETCH_SINGLE_PROJECT_SUCCESS';
 export const FETCH_SINGLE_PROJECT_ERROR = 'FETCH_SINGLE_PROJECT_ERROR';
 
+// Récupérer tous les projets (nom, cover)
 export const fetchProjects = () => ({
   type: FETCH_PROJECTS
 });
@@ -22,6 +23,7 @@ export const fetchProjectsError = (error) => ({
   error
 });
 
+// Récupérer les données d'un seul projet avec son ID
 export const fetchSingleProject = () => ({
   type: FETCH_SINGLE_PROJECT
 });
