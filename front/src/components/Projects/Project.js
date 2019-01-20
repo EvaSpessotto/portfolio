@@ -102,4 +102,4 @@ const Project = ({ singleProject: { title, project_desc, banner_img, devices_img
   )
 }
 
-export default (Project);
+export default Project;

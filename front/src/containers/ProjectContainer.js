@@ -27,7 +27,7 @@ class ProjectContainer extends Component {
   }
 }
 const mapStateToProps = state => ({
-  singleProject: state.singleProject
+  singleProject: state.projects.singleProject
 });
 
 const mapDispatchToProps = {
