@@ -2,7 +2,7 @@ import React from 'react';
 import '../../style/contact.scss';
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
-const ContactForm = ({ onChange, handleSubmit }) => {
+const ContactForm = ({ onChange, handleSubmit, form }) => {
   return (
     <Container id="contact-form">
       <Row>
@@ -20,6 +20,7 @@ const ContactForm = ({ onChange, handleSubmit }) => {
                 type="text" 
                 name="name" 
                 onChange={onChange}
+                value={form.name}
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
@@ -30,6 +31,7 @@ const ContactForm = ({ onChange, handleSubmit }) => {
                 type="email" 
                 name="email" 
                 onChange={onChange}
+                value={form.email}
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
@@ -40,6 +42,7 @@ const ContactForm = ({ onChange, handleSubmit }) => {
                 type="text" 
                 name="subject" 
                 onChange={onChange}
+                value={form.subject}
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
@@ -50,6 +53,7 @@ const ContactForm = ({ onChange, handleSubmit }) => {
                 type="textarea" 
                 name="message" 
                 onChange={onChange}
+                value={form.message}
                 rows="8"
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />

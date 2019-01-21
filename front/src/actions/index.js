@@ -7,9 +7,8 @@ export const FETCH_SINGLE_PROJECT = 'FETCH_SINGLE_PROJECT';
 export const FETCH_SINGLE_PROJECT_SUCCESS = 'FETCH_SINGLE_PROJECT_SUCCESS';
 export const FETCH_SINGLE_PROJECT_ERROR = 'FETCH_SINGLE_PROJECT_ERROR';
 
-export const FORM_NEW_MESSAGE = 'FORM_NEW_MESSAGE';
 export const FORM_CHANGE_FIELD = 'FORM_CHANGE_FIELD';
-
+export const FORM_SUBMIT = 'FORM_SUBMIT';
 
 
 // Récupérer tous les projets (nom, cover)
@@ -44,17 +43,16 @@ export const fetchSingleProjectError = (error) => ({
 
 
 // le forumaire de contact
-export const formNewMessage = (message) => {
-  return {
-    type: FORM_NEW_MESSAGE,
-    message
-  }
-}
-
 export const formChangeField = (key, value) => {
   return{
     type: FORM_CHANGE_FIELD,
     key, 
     value
+  }
+}
+
+export const formSubmit = () => {
+  return{
+    type: FORM_SUBMIT
   }
 }

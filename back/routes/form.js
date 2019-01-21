@@ -29,10 +29,22 @@ router.post('/', (req, res) => {
     }
 
     transporter.sendMail(mailOptions, (err, info) => {
-      if (err) console.log(err)
-      else console.log(info)
+      if (err) { 
+       return res.status(500).json({
+          error: err.message
+        })
+      }
+      res.json({
+        info
+      })
     })
+
+    transporter.close();
+
+
   })
+  
+  
 })
 
 module.exports = router;
