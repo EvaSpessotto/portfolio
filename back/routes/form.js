@@ -1,45 +1,36 @@
 const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
-const db = require('../sql/config');
+const { email, password } = require('../data/gmailConfig.json');
 
 router.post('/', (req, res) => {
   nodemailer.createTestAccount((err, account) => {
     const htmlEmail = `
-      <h3>Contact Details</h3>
-      <ul>
-        <li>Name: ${req.body.name}</li>
-        <li>Email: ${req.body.email}</li>
-        <li>Subject: ${req.body.subject}</li>
-      </ul>
+      <h3>From</h3>
+      <p>Name: ${req.body.name}</p>
+      <p>Email: ${req.body.email}</p>
       <h3>Message</h3>
       <p>${req.body.message}</p>
     `
 
     let transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
+      service: 'gmail',
       auth: {
-        user: 'arxd3zximtdyn7ku@ethereal.email',
-        pass: 'KMEhfVafqctGTttRCu'
+        user: email,
+        pass: password
       }
     })
 
     let mailOptions = {
       from: req.body.email,
-      to: 'arxd3zximtdyn7ku@ethereal.email',
-      replyTo: req.body.email,
+      to: email,
       subject: req.body.subject,
-      text: req.body.message,
       html: htmlEmail
     }
 
     transporter.sendMail(mailOptions, (err, info) => {
-      if (err) {
-        return console.log(err)
-      }
-      console.log('Message sent: %s', info.message)
-      console.log('Message URL: %s', nodemailer.getTestMessageUrl(info))
+      if (err) console.log(err)
+      else console.log(info)
     })
   })
 })
