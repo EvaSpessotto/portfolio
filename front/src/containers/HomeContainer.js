@@ -28,7 +28,7 @@ class HomeContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  projects: state.projects
+  projects: state.projects.projects
 });
 
 const mapDispatchToProps = {

@@ -8,6 +8,7 @@ create table project(
 );
 
 create table image(
+  id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(128),
   path VARCHAR(250),
   project_id INTEGER NOT NULL

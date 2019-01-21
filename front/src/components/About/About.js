@@ -5,7 +5,6 @@ import styled, { keyframes } from 'styled-components';
 import { fadeIn, bounce, fadeInDown } from 'react-animations';
 
 const fadeAnimation = keyframes`${fadeInDown}`;
-
 const FadeDiv = styled.div`
   animation: 1s ${fadeAnimation};
 `;

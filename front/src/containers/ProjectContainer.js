@@ -9,7 +9,7 @@ class ProjectContainer extends Component {
 
   componentDidMount() {
     this.props.fetchSingleProject();
-    const id = this.props.match.url.substr(1);
+    const id = this.props.match.url.substr(9);
 
     axios.get(`/api/projects/${id}`)
       .then(res => res.data)
@@ -27,7 +27,7 @@ class ProjectContainer extends Component {
   }
 }
 const mapStateToProps = state => ({
-  singleProject: state.singleProject
+  singleProject: state.projects.singleProject
 });
 
 const mapDispatchToProps = {

@@ -1,0 +1,12 @@
+@import 'basics';
+
+.Toastify__toast{
+  background-color: $blue;
+  color: white;
+  font-family: $font;
+  font-size: 1.2em;
+}
+
+.Toastify__close-button{
+  color: white;
+}
