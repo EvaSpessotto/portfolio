@@ -18,8 +18,8 @@ const ContactLinks = () => {
             socialLinks.map((socialLink, key) => {
               const { link, icon } = socialLink;
               return(
-               <a href={link} target="_blank" rel="noopener noreferrer">
-                <i className={`${icon} ${socialLink.class} fa-3x mr-3`} key={key}></i>
+               <a href={link} target="_blank" rel="noopener noreferrer" key={key}>
+                <i className={`${icon} ${socialLink.class} fa-3x mr-3`} ></i>
               </a>
               )
             })

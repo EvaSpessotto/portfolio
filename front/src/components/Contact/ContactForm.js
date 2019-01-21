@@ -2,7 +2,7 @@ import React from 'react';
 import '../../style/contact.scss';
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
-const ContactForm = ({onChange}) => {
+const ContactForm = ({ onChange, handleSubmit }) => {
   return (
     <Container id="contact-form">
       <Row>
@@ -13,7 +13,7 @@ const ContactForm = ({onChange}) => {
       </Row>
       <Row className="mt-4">
         <Col lg="6"  className="offset-lg-3">
-          <Form >
+          <Form onSubmit={handleSubmit} >
             <FormGroup className="name blue mt-4">
               <Label for="name">nom</Label>
               <Input 
@@ -54,14 +54,10 @@ const ContactForm = ({onChange}) => {
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
+            <button className="submit-btn mt-5" type="submit">Envoyer</button>
           </Form>
         </Col>
       </Row>
-      <Row className="mt-5">
-          <Col className="d-flex justify-content-center">
-            <button className="submit-btn">Envoyer</button>
-          </Col>
-        </Row>
     </Container>
   );
 }
