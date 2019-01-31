@@ -34,9 +34,7 @@ router.post('/', (req, res) => {
           error: err.message
         })
       }
-      res.json({
-        info
-      })
+      res.json(info)
     })
 
     transporter.close();

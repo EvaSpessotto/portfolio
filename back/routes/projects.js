@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const db = require('../sql/config');
 
+
+
 router.get('/', (req, res) => {
   db.query('SELECT id, title, project_type, cover_img from project', (err, projects) => {
     if(err) {
