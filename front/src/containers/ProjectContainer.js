@@ -9,7 +9,7 @@ class ProjectContainer extends Component {
 
   componentDidMount() {
     this.props.fetchSingleProject();
-    const id = this.props.match.url.substr(9);
+    const id = this.props.match.url.id;
 
     axios.get(`/api/projects/${id}`)
       .then(res => res.data)
