@@ -45,8 +45,8 @@ const About = () => {
           <p>
             Le web n’est pas la seule chose qui me fait vibrer, j’aime tout particulièrement l'illustration, 
             la <a href={links.serigraphie} className="blue" target="_blank" rel="noopener noreferrer">sérigraphie</a> et la photographie (<a href={links.argentique} className="red" target="_blank" rel="noopener noreferrer">argentique</a> comme numérique). Étant assez adepte du DIY, 
-            j’ai monté mon propre atelier de sérigraphie tout récemment (commencé il y a 3 ans, il était temps...), 
-            vous trouverez donc aussi des projets print et photographiques sur mon portfolio avec de jolies clichés 
+            j’ai monté mon propre atelier de sérigraphie tout récemment (commencé il y a 3 ans), 
+            vous trouverez donc aussi des projets print et photographiques sur mon portfolio avec des clichés 
             pris par mes soins.
           </p>
           <p>
