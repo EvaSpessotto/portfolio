@@ -1,37 +1,51 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import { fetchSingleProject, fetchSingleProjectSuccess, fetchSingleProjectError } from '../actions';
-import { connect } from 'react-redux';
-import Project from '../components/Projects/Project';
-
+import React, { Component } from "react";
+import axios from "axios";
+import {
+  fetchSingleProject,
+  fetchSingleProjectSuccess,
+  fetchSingleProjectError,
+  findProject
+} from "../actions";
+import { connect } from "react-redux";
+import Project from "../components/Projects/Project";
 
 class ProjectContainer extends Component {
-
   componentDidMount() {
-    this.props.fetchSingleProject();
-    const id = this.props.match.url.id;
+  console.log(  this.props.projects.filter(project => 
+      project.id === 1
+		))
+		
+		findProject("Hello")
+	}
+	
+	onClick() {
+		findProject;
+		console.log("oui")
+	}
 
-    axios.get(`/api/projects/${id}`)
-      .then(res => res.data)
-      .then(project => this.props.fetchSingleProjectSuccess(project))
-      .catch(error => this.props.fetchSingleProjectError(error.response.data))
-  }
-  
   render() {
-    const singleProject = this.props.singleProject;
+    const project = this.props.project;
     return (
-      <div>
-        <Project singleProject={singleProject} />
+      <div style={{marginTop: '200px'}}> 
+				<button onClick={this.onClick} >Click me </button>
+        <Project singleProject={project} />
       </div>
     );
   }
 }
 const mapStateToProps = state => ({
-  singleProject: state.projects.singleProject
+  project: state.projects.project,
+  projects: state.projects.projects
 });
 
 const mapDispatchToProps = {
-  fetchSingleProject, fetchSingleProjectSuccess, fetchSingleProjectError
+  fetchSingleProject,
+  fetchSingleProjectSuccess,
+  fetchSingleProjectError,
+  findProject
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProjectContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProjectContainer);

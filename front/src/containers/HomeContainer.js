@@ -11,12 +11,12 @@ class HomeContainer extends Component {
   
   componentDidMount() {
     this.props.fetchProjects();
-    axios.get('/posts')
+    axios.get('/portfolioprojects')
     .then(res => res.data)
     .then(projects => this.props.fetchProjectsSuccess(projects))
     .catch(error => this.props.fetchProjectsError(error.response.data))
-  }
-
+	}
+	
   render() {
     return (
       <FadeInDiv>
@@ -32,7 +32,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  fetchProjects, fetchProjectsSuccess, fetchProjectsError
+	fetchProjects, fetchProjectsSuccess, fetchProjectsError
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);
