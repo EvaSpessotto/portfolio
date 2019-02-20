@@ -7,28 +7,22 @@ import {
   findProject
 } from "../actions";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import Project from "../components/Projects/Project";
 
 class ProjectContainer extends Component {
   componentDidMount() {
-  console.log(  this.props.projects.filter(project => 
-      project.id === 1
-		))
-		
-		findProject("Hello")
-	}
-	
-	onClick() {
-		findProject;
-		console.log("oui")
-	}
+    const project = this.props.projects.find(
+      project => project.id == this.props.match.params.id
+    );
+		this.props.findProject(project);
+  }
 
   render() {
-    const project = this.props.project;
+    console.log(this.props.project)
     return (
-      <div style={{marginTop: '200px'}}> 
-				<button onClick={this.onClick} >Click me </button>
-        <Project singleProject={project} />
+      <div>
+        <Project {...this.props.project} />
       </div>
     );
   }
@@ -45,7 +39,9 @@ const mapDispatchToProps = {
   findProject
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ProjectContainer);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(ProjectContainer)
+);
