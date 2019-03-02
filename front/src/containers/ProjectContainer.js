@@ -8,7 +8,11 @@ import {
 } from "../actions";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import Project from "../components/Projects/Project";
+import Wildhub from "../components/Projects/Wildhub";
+import DeadCandy from "../components/Projects/DeadCandy";
+import Photomania from "../components/Projects/Photomania";
+import Pokedex from "../components/Projects/Pokedex";
+
 
 class ProjectContainer extends Component {
   componentDidMount() {
@@ -19,10 +23,20 @@ class ProjectContainer extends Component {
   }
 
   render() {
-    console.log(this.props.project)
+		
     return (
       <div>
-        <Project {...this.props.project} />
+				{
+					this.props.match.params.id == 1 
+					? <DeadCandy {...this.props.project} />
+					: this.props.match.params.id == 2
+					? <Photomania {...this.props.project} />
+					: this.props.match.params.id == 3
+					? <Pokedex {...this.props.project} />
+					: this.props.match.params.id == 4
+					? <Wildhub {...this.props.project} />
+					: ''
+				}
       </div>
     );
   }

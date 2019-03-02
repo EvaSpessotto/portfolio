@@ -4,7 +4,6 @@ import "../../style/project.scss";
 import { Parallax } from "react-parallax";
 
 const Project = ({ Title, id, Banner }) => {
-  console.log(Title);
   return (
     <div id="project">
       <Container className="m-0 header" fluid>
@@ -30,7 +29,7 @@ const Project = ({ Title, id, Banner }) => {
         </Row>
       </Container>
 
-      <Container className="coloured-section p-5" fluid>
+      <Container >
         <Row>
           <Col>
             <Container>
