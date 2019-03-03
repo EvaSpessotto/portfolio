@@ -4,14 +4,15 @@ import {
   FETCH_PROJECTS_ERROR,
   FETCH_SINGLE_PROJECT,
   FETCH_SINGLE_PROJECT_SUCCESS,
-  FETCH_SINGLE_PROJECT_ERROR,
+	FETCH_SINGLE_PROJECT_ERROR,
+	FIND_PROJECT
 } from '../actions';
 
 const initialState = {
   loading: false,
   error: null,
   projects: [],
-  singleProject: [],
+  project: null,
 };
 
 const reducer = (state = initialState, action ) => {
@@ -33,7 +34,10 @@ const reducer = (state = initialState, action ) => {
     }
     case FETCH_SINGLE_PROJECT_ERROR: {
       return {...state, loading: false, error: action.error}
-    }
+		}
+		case FIND_PROJECT: {
+			return {...state, project: action.project}
+		}
     default:
       return state;
   }
