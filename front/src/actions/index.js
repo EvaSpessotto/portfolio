@@ -10,6 +10,8 @@ export const FETCH_SINGLE_PROJECT_ERROR = 'FETCH_SINGLE_PROJECT_ERROR';
 export const FORM_CHANGE_FIELD = 'FORM_CHANGE_FIELD';
 export const FORM_SUBMIT = 'FORM_SUBMIT';
 
+export const FIND_PROJECT = 'FIND_PROJECT';
+
 
 // Récupérer tous les projets (nom, cover)
 export const fetchProjects = () => ({
@@ -55,4 +57,11 @@ export const formSubmit = () => {
   return{
     type: FORM_SUBMIT
   }
+}
+
+export const findProject = (project) => {
+	return {
+		type: FIND_PROJECT,
+		project
+	} 
 }
