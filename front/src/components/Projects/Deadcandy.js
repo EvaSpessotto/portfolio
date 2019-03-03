@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import '../../style/project.scss';
+import '../../style/deadcandy.scss';
 import { Parallax } from 'react-parallax';
 
 const Project = ({ title, project_desc, images }) => {
   return (
-    <div id="project">
+    <div id="deadcandy">
       <Container className="m-0 header" fluid>
         <Row>
           <Col className="p-0 text-center">

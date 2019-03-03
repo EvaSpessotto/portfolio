@@ -1,15 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import '../../style/project.scss';
+import '../../style/photomania.scss';
 import { Parallax } from 'react-parallax';
 
 const Project = ({ title, project_desc, images }) => {
-	{
-		console.log(images)
-	}
-	console.log(images && images[1].path)
   return (
-    <div id="project">
+    <div id="photomania">
       <Container className="m-0 header" fluid>
         <Row>
           <Col className="p-0 text-center">

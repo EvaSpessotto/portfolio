@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import '../../style/project.scss';
+import '../../style/wildhub.scss';
 import { Parallax } from 'react-parallax';
 
 const Project = ({ title, project_desc, images }) => {
 	{console.log(images)}
   return (
-    <div id="project">
+    <div id="wildhub">
       <Container className="m-0 header" fluid>
         <Row>
           <Col className="p-0 text-center">
