@@ -3,13 +3,13 @@ const router = express.Router();
 const db = require('../sql/config');
 
 router.get('/', (req, res) => {
-  db.query('SELECT id, title, project_type, cover_img from project', (err, projects) => {
+  db.query('SELECT * from project', (err, projects) => {
     if(err) {
       return res.status(500).json({
         error: err.message,
         detail: err.sql
       });
-    }
+		}
     res.status(200).json(projects)
   })
 })
