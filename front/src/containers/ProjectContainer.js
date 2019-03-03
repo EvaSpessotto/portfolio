@@ -34,11 +34,11 @@ class ProjectContainer extends Component {
 					this.props.match.params.id === "1"
 					? <Photomania {...project} />
 					: this.props.match.params.id === "2"
-					? <Wildhub project={project} />
+					? <Wildhub {...project} />
 					: this.props.match.params.id === "3"
-					? <Deadcandy project={project} />
+					? <Deadcandy {...project} />
 					: this.props.match.params.id === "4"
-					? <Mycontribution project={project} />
+					? <Mycontribution {...project} />
 					: ""
 				}
       </div>
