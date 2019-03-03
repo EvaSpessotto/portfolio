@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import "../../style/project.scss";
 import { Parallax } from "react-parallax";
 
-const Project = ({ Title, id, Banner }) => {
+const Project = ({ Title, Resume, Banner }) => {
   return (
     <div id="project">
       <Container className="m-0 header" fluid>
@@ -19,7 +19,7 @@ const Project = ({ Title, id, Banner }) => {
       <Container>
         <Row className="presentation">
           <Col>
-            <p>{Title}</p>
+            <p>{Resume}</p>
           </Col>
         </Row>
         <Row className="all-devices mt-5">
@@ -35,54 +35,29 @@ const Project = ({ Title, id, Banner }) => {
             <Container>
               <Row>
                 <Col lg="4" className="mt-3">
-                  <h2>Night-mode</h2>
-                  <div className="line" />
+                  <img src="" />
                 </Col>
               </Row>
               <Row>
                 <Col className="d-flex justify-content-center">
-                  <img src="" className="img-fluid p-5 mt-5" alt="" />
+                  <p></p>
                 </Col>
               </Row>
             </Container>
-          </Col>
-        </Row>
-      </Container>
-
-      <Container className="multi-pages">
-        <Row>
-          <Col lg="4">
-            <h2>Explore</h2>
-            <div className="line" />
-          </Col>
-        </Row>
-        <Row>
-          <Col className="d-flex justify-content-center" lg="12">
-            <img src="" className="img-fluid p-5" alt="" />
           </Col>
         </Row>
       </Container>
 
       <Container className="coloured-section" fluid>
         <Row>
-          <Col>
-            <Container>
-              <Row>
-                <Col lg="4" className="pt-5">
-                  <h2>Profile</h2>
-                  <div className="line" />
-                </Col>
-              </Row>
-              <Row>
-                <Col className="d-flex justify-content-center">
-                  <img
-                    src="https://via.placeholder.com/800x400"
-                    className="img-fluid p-5"
-                    alt=""
-                  />
-                </Col>
-              </Row>
-            </Container>
+          <Col lg="4" className="pt-5">
+            <h2>Version mobile</h2>
+            <div className="line" />
+          </Col>
+        </Row>
+        <Row>
+          <Col className="d-flex justify-content-center" lg="12">
+            <img src="" className="img-fluid p-5" alt="" />
           </Col>
         </Row>
       </Container>

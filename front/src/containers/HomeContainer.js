@@ -11,7 +11,7 @@ class HomeContainer extends Component {
   
   componentDidMount() {
     this.props.fetchProjects();
-    axios.get('/portfolioprojects')
+    axios.get('http://localhost:1337/portfolioprojects')
     .then(res => res.data)
     .then(projects => this.props.fetchProjectsSuccess(projects))
     .catch(error => this.props.fetchProjectsError(error.response.data))

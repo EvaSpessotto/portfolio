@@ -27,16 +27,17 @@ class ProjectContainer extends Component {
     return (
       <div>
 				{
-					this.props.match.params.id == 1 
+					this.props.match.params.id === '1' 
 					? <DeadCandy {...this.props.project} />
-					: this.props.match.params.id == 2
+					: this.props.match.params.id === '2'
 					? <Photomania {...this.props.project} />
-					: this.props.match.params.id == 3
+					: this.props.match.params.id === '3'
 					? <Pokedex {...this.props.project} />
-					: this.props.match.params.id == 4
+					: this.props.match.params.id === '4'
 					? <Wildhub {...this.props.project} />
 					: ''
 				}
+				{console.log(this.props.project)}
       </div>
     );
   }

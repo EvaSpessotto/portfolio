@@ -18,11 +18,12 @@ class HomeProjectsList extends Component {
         <Row>
           {
             this.props.projects.map((project, key) => {
-							const { Title, Cover, id } = project;
+							const { Title, cover, id } = project;
+							console.log(project)
               return(
                 <Col lg="4" md="6" sm="12" className="d-flex justify-content-center" key={key}>
                   <Link to={`/project/${id}`}>
-                    <img src={Cover.url} className="mb-5 img-fluid rounded-circle wow fadeInUp" alt={Title} />
+                    <img src={cover.name} className="mb-5 img-fluid rounded-circle wow fadeInUp" alt={Title} />
                   </Link>
                 </Col>
               )
