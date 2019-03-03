@@ -33,9 +33,9 @@ export const fetchSingleProject = () => ({
   type: FETCH_SINGLE_PROJECT
 });
 
-export const fetchSingleProjectSuccess = (singleProject) => ({
+export const fetchSingleProjectSuccess = (project) => ({
   type: FETCH_SINGLE_PROJECT_SUCCESS,
-  singleProject
+  project
 });
 
 export const fetchSingleProjectError = (error) => ({
@@ -44,7 +44,7 @@ export const fetchSingleProjectError = (error) => ({
 });
 
 
-// le forumaire de contact
+// le formulaire de contact
 export const formChangeField = (key, value) => {
   return{
     type: FORM_CHANGE_FIELD,
@@ -59,6 +59,7 @@ export const formSubmit = () => {
   }
 }
 
+// Pour trouver un projet déjà fetch dans le store
 export const findProject = (project) => {
 	return {
 		type: FIND_PROJECT,

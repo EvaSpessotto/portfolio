@@ -30,7 +30,7 @@ const reducer = (state = initialState, action ) => {
       return {...state, loading: true}
     }
     case FETCH_SINGLE_PROJECT_SUCCESS: {
-      return {...state, loading: false, singleProject: action.singleProject}
+      return {...state, loading: false, project: action.project}
     }
     case FETCH_SINGLE_PROJECT_ERROR: {
       return {...state, loading: false, error: action.error}

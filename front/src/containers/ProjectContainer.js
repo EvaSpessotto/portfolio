@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { fetchSingleProject, fetchSingleProjectSuccess, fetchSingleProjectError, findProject } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router-dom";
@@ -9,13 +10,21 @@ import Mycontribution from '../components/Projects/Mycontribution'
 
 class ProjectContainer extends Component {
 
-  componentDidMount() {
-    const project = this.props.projects.find(
-      project => project.id === this.props.match.params.id
-    );
-		this.props.findProject(project);
-  }
-
+  // componentDidMount() {
+  //   const project = this.props.projects.find(
+  //     project => project.id == this.props.match.params.id
+  //   );
+	// 	this.props.findProject(project);
+	// }
+	
+	componentDidMount() {
+		this.props.fetchSingleProject()
+		const id = this.props.match.params.id
+		axios.get(`/api/projects/${id}`)
+			.then(res => res.data)
+			.then(project => this.props.fetchSingleProjectSuccess(project))
+			.catch(error => this.props.fetchSingleProjectError(error.response.data))
+	}
   
   render() {
     const project = this.props.project;
