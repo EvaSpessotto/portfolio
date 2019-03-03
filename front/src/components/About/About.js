@@ -2,7 +2,7 @@ import React from 'react';
 import '../../style/about.scss';
 import { Container, Row , Col } from 'reactstrap';
 import styled, { keyframes } from 'styled-components';
-import { fadeIn, bounce, fadeInDown } from 'react-animations';
+import { fadeInDown } from 'react-animations';
 
 const fadeAnimation = keyframes`${fadeInDown}`;
 const FadeDiv = styled.div`

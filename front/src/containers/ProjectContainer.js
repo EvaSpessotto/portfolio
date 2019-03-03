@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { fetchSingleProject, fetchSingleProjectSuccess, fetchSingleProjectError, findProject } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router-dom";

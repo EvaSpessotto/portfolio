@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Col } from 'reactstrap';
 import styled from 'styled-components';
 import { Droppable } from 'react-beautiful-dnd';
