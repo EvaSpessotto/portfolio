@@ -10,6 +10,8 @@ export const FETCH_SINGLE_PROJECT_ERROR = 'FETCH_SINGLE_PROJECT_ERROR';
 export const FORM_CHANGE_FIELD = 'FORM_CHANGE_FIELD';
 export const FORM_SUBMIT = 'FORM_SUBMIT';
 
+export const FIND_PROJECT = 'FIND_PROJECT';
+
 
 // Récupérer tous les projets (nom, cover)
 export const fetchProjects = () => ({
@@ -31,9 +33,9 @@ export const fetchSingleProject = () => ({
   type: FETCH_SINGLE_PROJECT
 });
 
-export const fetchSingleProjectSuccess = (singleProject) => ({
+export const fetchSingleProjectSuccess = (project) => ({
   type: FETCH_SINGLE_PROJECT_SUCCESS,
-  singleProject
+  project
 });
 
 export const fetchSingleProjectError = (error) => ({
@@ -42,7 +44,7 @@ export const fetchSingleProjectError = (error) => ({
 });
 
 
-// le forumaire de contact
+// le formulaire de contact
 export const formChangeField = (key, value) => {
   return{
     type: FORM_CHANGE_FIELD,
@@ -55,4 +57,12 @@ export const formSubmit = () => {
   return{
     type: FORM_SUBMIT
   }
+}
+
+// Pour trouver un projet déjà fetch dans le store
+export const findProject = (project) => {
+	return {
+		type: FIND_PROJECT,
+		project
+	} 
 }

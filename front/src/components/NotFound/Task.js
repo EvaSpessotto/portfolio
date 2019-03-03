@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Col } from 'reactstrap';
 import { Draggable } from 'react-beautiful-dnd';
 import '../../style/notFound.scss';
 

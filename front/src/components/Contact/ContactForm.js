@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../style/contact.scss';
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const ContactForm = ({ onChange, handleSubmit, form }) => {
   return (

@@ -19,7 +19,7 @@ class HomeProjectsList extends Component {
         <Row>
           {
             this.props.projects.map((project, key) => {
-              const { cover_img, title, id } = project;
+              const { title, id, cover_img } = project;
               return(
                 <Col lg="4" md="6" sm="12" className="d-flex justify-content-center" key={key}>
                   <Link to={`/project/${id}`}>
@@ -29,27 +29,6 @@ class HomeProjectsList extends Component {
               )
             })
           }
-  
-          <Col lg="4" md="6" sm="12" className="d-flex justify-content-center wow fadeInUp">
-            <Link to="/project">
-                <img src="https://via.placeholder.com/300" className="mb-5 img-fluid rounded-circle wow fadeInUp" alt="" />
-            </Link>
-          </Col>
-          <Col lg="4" md="6" sm="12" className="d-flex justify-content-center">
-            <Link to="/project">
-                <img src="https://via.placeholder.com/300" className="mb-5 img-fluid rounded-circle wow fadeInUp" alt="" />
-            </Link>
-          </Col>
-          <Col lg="4" md="6" sm="12" className="d-flex justify-content-center wow fadeInUp">
-            <Link to="/project">
-                <img src="https://via.placeholder.com/300" className="mb-5 img-fluid rounded-circle wow fadeInUp " alt="" />
-            </Link>
-          </Col>
-          <Col lg="4" md="6" sm="12" className="d-flex justify-content-center wow fadeInUp">
-            <Link to="/project">
-                <img src="https://via.placeholder.com/300" className="mb-5 img-fluid rounded-circle" alt="" />
-            </Link>
-          </Col>
         </Row>
       </Container>
     );
