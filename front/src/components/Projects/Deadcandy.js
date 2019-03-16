@@ -15,7 +15,6 @@ const Project = ({ title, project_desc, images }) => {
                 strength={500}
               >
                 <div style={{ height: '600px' }} />
-                {/* <h1 id="title" className="mb-5">hello</h1> */}
             </Parallax>
           </Col>
         </Row>
@@ -45,8 +44,8 @@ const Project = ({ title, project_desc, images }) => {
                 </Col>
               </Row>
               <Row>
-                <Col className="d-flex justify-content-center">
-                  <img  src={images && images[3].path} className="img-fluid p-5 mt-5" alt="" />
+                <Col>
+                  <img  src={images && images[3].path} className="img-fluid w-100 p-5 mt-5" alt="" />
                 </Col>
               </Row>
             </Container>
