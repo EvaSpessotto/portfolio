@@ -4,7 +4,6 @@ import '../../style/wildhub.scss';
 import { Parallax } from 'react-parallax';
 
 const Project = ({ title, project_desc, images }) => {
-	{console.log(images)}
   return (
     <div id="wildhub">
       <Container className="m-0 header" fluid>

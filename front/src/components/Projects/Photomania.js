@@ -29,7 +29,7 @@ const Project = ({ title, project_desc, images }) => {
         </Row>
         <Row className="all-devices mt-5">
           <Col>
-            <img src={images && images[2].path} className="img-fluid w-100"  alt="" />
+            <img src={images && images[2].path} className="img-fluid"  alt="mockup devices" />
           </Col>
         </Row>
       </Container>
@@ -45,8 +45,8 @@ const Project = ({ title, project_desc, images }) => {
                 </Col>
               </Row>
               <Row>
-                <Col className="d-flex justify-content-center">
-                  <img src={images && images[4].path} className="img-fluid p-5 mt-5" alt="" />
+                <Col className="d-flex justify-content-center p-sm-5">
+                  <img src={images && images[4].path} className="img-fluid mt-5" alt="Page articles" />
                 </Col>
               </Row>
             </Container>
@@ -63,7 +63,7 @@ const Project = ({ title, project_desc, images }) => {
         </Row>
         <Row >
           <Col className="d-flex justify-content-center" lg="12">
-            <img src={images && images[3].path} className="img-fluid p-5" alt="" />
+            <img src={images && images[3].path} className="w-100 p-5" alt="Galerie" />
           </Col>
         </Row>
       </Container>

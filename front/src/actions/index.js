@@ -12,6 +12,8 @@ export const FORM_SUBMIT = 'FORM_SUBMIT';
 
 export const FIND_PROJECT = 'FIND_PROJECT';
 
+export const CLEAR_STORE = 'CLEAR_STORE';
+
 
 // Récupérer tous les projets (nom, cover)
 export const fetchProjects = () => ({
@@ -65,4 +67,10 @@ export const findProject = (project) => {
 		type: FIND_PROJECT,
 		project
 	} 
+}
+
+export const clearStore = () => {
+	return {
+		type: CLEAR_STORE
+	}
 }
