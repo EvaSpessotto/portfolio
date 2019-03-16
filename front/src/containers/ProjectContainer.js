@@ -39,16 +39,12 @@ class ProjectContainer extends Component {
       switch (id) {
         case "1":
           return <Photomania {...project} />;
-          break;
         case "2":
           return <Wildhub {...project} />;
-          break;
         case "3":
           return <Deadcandy {...project} />;
-          break;
         case "4":
           return <Mycontribution {...project} />;
-          break;
         default:
           return <NotFoundContainer />;
       }

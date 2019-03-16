@@ -1,7 +1,7 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import '../../style/photomania.scss';
-import { Parallax } from 'react-parallax';
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import "../../style/photomania.scss";
+import { Parallax } from "react-parallax";
 
 const Project = ({ title, project_desc, images }) => {
   return (
@@ -9,13 +9,13 @@ const Project = ({ title, project_desc, images }) => {
       <Container className="m-0 header" fluid>
         <Row>
           <Col className="p-0 text-center">
-              <Parallax
-                bgImage={images && images[1].path}
-                bgImageAlt="the cat"
-                strength={500}
-              >
-                <div style={{ height: '600px' }} />
-                {/* <h1 id="title" className="mb-5">{title}</h1> */}
+            <Parallax
+              bgImage={images && images[1].path}
+              bgImageAlt="the cat"
+              strength={500}
+            >
+              <div style={{ height: "600px" }} />
+              {/* <h1 id="title" className="mb-5">{title}</h1> */}
             </Parallax>
           </Col>
         </Row>
@@ -29,7 +29,11 @@ const Project = ({ title, project_desc, images }) => {
         </Row>
         <Row className="all-devices mt-5">
           <Col>
-            <img src={images && images[2].path} className="img-fluid w-100"  alt="mockup devices" />
+            <img
+              src={images && images[2].path}
+              className="img-fluid w-100"
+              alt="mockup devices"
+            />
           </Col>
         </Row>
       </Container>
@@ -41,12 +45,16 @@ const Project = ({ title, project_desc, images }) => {
               <Row>
                 <Col lg="4" className="mt-3">
                   <h2>Articles</h2>
-                  <div className="line"></div>
+                  <div className="line" />
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <img src={images && images[4].path} className="img-fluid w-100 mt-5" alt="Page articles" />
+                  <img
+                    src={images && images[4].path}
+                    className="img-fluid w-100 mt-5"
+                    alt="Page articles"
+                  />
                 </Col>
               </Row>
             </Container>
@@ -58,27 +66,42 @@ const Project = ({ title, project_desc, images }) => {
         <Row>
           <Col lg="4">
             <h2>Galerie</h2>
-            <div className="line"></div>
+            <div className="line" />
           </Col>
         </Row>
         <Row>
           <Col>
-            <img src={images && images[3].path} className="img-fluid w-100 mt-5" alt="Galerie" />
+            <img
+              src={images && images[3].path}
+              className="img-fluid w-100 mt-5"
+              alt="Galerie"
+            />
           </Col>
         </Row>
       </Container>
 
       <Container className="project-links">
         <Row>
-          <Col className="d-flex justify-content-center ">
-            <h4 className="mr-3">Liens relatifs au projet: </h4>
-            <a href="https://github.com"><i className="fab fa-github-square fa-3x mr-3"></i></a>
-            <a href="https://github.com"><i className="fas fa-link fa-3x"></i></a>
+          <Col className="d-flex justify-content-center">
+            <a href="https://github.com" rel="noopener noreferrer">
+              <h2>
+                Repo
+                <i className="fab fa-github-square ml-3" />
+              </h2>
+            </a>
+          </Col>
+          <Col className="d-flex justify-content-center">
+            <a href="https://github.com" rel="noopener noreferrer">
+              <h2>
+                Demo
+                <i className="fas fa-link ml-3" />
+              </h2>
+            </a>
           </Col>
         </Row>
       </Container>
     </div>
-  )
-}
+  );
+};
 
 export default Project;

@@ -89,10 +89,21 @@ const Project = ({ title, project_desc, images }) => {
 
       <Container className="project-links">
         <Row>
-          <Col className="d-flex justify-content-center ">
-            <h4 className="mr-3">Liens relatifs au projet: </h4>
-            <a href="https://github.com"><i className="fab fa-github-square fa-3x mr-3"></i></a>
-            <a href="https://github.com"><i className="fas fa-link fa-3x"></i></a>
+          <Col className="d-flex justify-content-center">
+            <a href="https://github.com" rel="noopener noreferrer">
+              <h2>
+                Repo
+                <i className="fab fa-github-square ml-3" />
+              </h2>
+            </a>
+          </Col>
+          <Col className="d-flex justify-content-center">
+            <a href="https://github.com" rel="noopener noreferrer">
+              <h2>
+                Demo
+                <i className="fas fa-link ml-3" />
+              </h2>
+            </a>
           </Col>
         </Row>
       </Container>
