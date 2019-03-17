@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import "../../style/photomania.scss";
+import "../../style/project.scss";
 import { Parallax } from "react-parallax";
 
-const Project = ({ title, project_desc, images }) => {
+const Photomania = ({project_desc, images, demo_link, github_link }) => {
   return (
     <div id="photomania">
       <Container className="m-0 header" fluid>
@@ -22,8 +22,8 @@ const Project = ({ title, project_desc, images }) => {
       </Container>
 
       <Container>
-        <Row className="presentation">
-          <Col>
+        <Row className="presentation d-flex justify-content-center">
+          <Col lg="8" sm="12">
             <p>{project_desc}</p>
           </Col>
         </Row>
@@ -38,7 +38,7 @@ const Project = ({ title, project_desc, images }) => {
         </Row>
       </Container>
 
-      <Container className="coloured-section p-5" fluid>
+      <Container className="coloured-section blue p-5" fluid>
         <Row>
           <Col>
             <Container>
@@ -82,26 +82,30 @@ const Project = ({ title, project_desc, images }) => {
 
       <Container className="project-links">
         <Row>
-          <Col className="d-flex justify-content-center">
-            <a href="https://github.com" rel="noopener noreferrer">
-              <h2>
-                Repo
-                <i className="fab fa-github-square ml-3" />
-              </h2>
-            </a>
-          </Col>
-          <Col className="d-flex justify-content-center">
-            <a href="https://github.com" rel="noopener noreferrer">
-              <h2>
-                Demo
-                <i className="fas fa-link ml-3" />
-              </h2>
-            </a>
-          </Col>
+          {github_link && (
+            <Col className="d-flex justify-content-center">
+              <a href={github_link} target="_blank" rel="noopener noreferrer">
+                <h2>
+                  Repo
+                  <i className="fab fa-github-square ml-3" />
+                </h2>
+              </a>
+            </Col>
+          )}
+          {demo_link && (
+            <Col className="d-flex justify-content-center">
+              <a href="https://github.com" rel="noopener noreferrer">
+                <h2>
+                  Demo
+                  <i className="fas fa-link ml-3" />
+                </h2>
+              </a>
+            </Col>
+          )}
         </Row>
       </Container>
     </div>
   );
 };
 
-export default Project;
+export default Photomania;

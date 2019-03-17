@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import '../../style/project.scss';
 import { Parallax } from 'react-parallax';
 
-const Project = ({ singleProject }) => {
+const Mycontribution = ({ singleProject }) => {
   return (
     <div id="project">
 		mycontribution
@@ -102,4 +102,4 @@ const Project = ({ singleProject }) => {
   )
 }
 
-export default Project;
+export default Mycontribution;
