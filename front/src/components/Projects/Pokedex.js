@@ -22,8 +22,8 @@ const Pokedex = ({ project_desc, images }) => {
       </Container>
 
       <Container>
-        <Row className="presentation">
-          <Col>
+        <Row className="presentation d-flex justify-content-center">
+          <Col lg="8" sm="12">
             <p>{project_desc}</p>
           </Col>
         </Row>
