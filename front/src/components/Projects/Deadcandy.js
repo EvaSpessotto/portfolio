@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import '../../style/deadcandy.scss';
+import '../../style/project.scss';
 import { Parallax } from 'react-parallax';
 
-const Project = ({ project_desc, images }) => {
+const DeadCandy = ({ project_desc, images }) => {
   return (
     <div id="deadcandy">
       <Container className="m-0 header" fluid>
@@ -77,4 +77,4 @@ const Project = ({ project_desc, images }) => {
   )
 }
 
-export default Project;
+export default DeadCandy;

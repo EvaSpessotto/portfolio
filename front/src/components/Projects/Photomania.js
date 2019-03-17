@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import "../../style/photomania.scss";
+import "../../style/project.scss";
 import { Parallax } from "react-parallax";
 
-const Project = ({ title, project_desc, images }) => {
+const Photomania = ({ title, project_desc, images }) => {
   return (
     <div id="photomania">
       <Container className="m-0 header" fluid>
@@ -104,4 +104,4 @@ const Project = ({ title, project_desc, images }) => {
   );
 };
 
-export default Project;
+export default Photomania;

@@ -3,9 +3,10 @@ import { Container, Row, Col } from 'reactstrap';
 import '../../style/project.scss';
 import { Parallax } from 'react-parallax';
 
-const Wildhub = ({ title, project_desc, images }) => {
+const Pokedex = ({ project_desc, images }) => {
+	console.log(images)
   return (
-    <div id="wildhub">
+    <div id="pokedex">
       <Container className="m-0 header" fluid>
         <Row>
           <Col className="p-0 text-center">
@@ -45,41 +46,7 @@ const Wildhub = ({ title, project_desc, images }) => {
               </Row>
               <Row>
                 <Col>
-                  <img  src={images && images[6].path} className="img-fluid w-100 mt-5" alt="" />
-                </Col>
-              </Row>
-            </Container>
-          </Col>
-        </Row>
-      </Container>
-
-      <Container className="multi-pages">
-        <Row>
-          <Col lg="4">
-            <h2>Explore</h2>
-            <div className="line"></div>
-          </Col>
-        </Row>
-        <Row >
-          <Col>
-            <img src={images && images[7].path} className="img-fluid w-100 p-5" alt="Page explorer" />
-          </Col>
-        </Row>
-      </Container>
-
-       <Container className="coloured-section" fluid>
-        <Row>
-          <Col>
-            <Container>
-              <Row>
-                <Col lg="4" className="pt-5">
-                  <h2>Nightmode</h2>
-                  <div className="line"></div>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <img src={images && images[5].path} className="img-fluid w-100 p-5" alt="" />
+                  <img  src={images && images[3].path} className="img-fluid w-100 mt-5" alt="" />
                 </Col>
               </Row>
             </Container>
@@ -111,4 +78,4 @@ const Wildhub = ({ title, project_desc, images }) => {
   )
 }
 
-export default Wildhub;
+export default Pokedex;
