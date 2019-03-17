@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import '../../style/project.scss';
 import { Parallax } from 'react-parallax';
 
-const Pokedex = ({ project_desc, images }) => {
+const Pokedex = ({ project_desc, images, demo_link, github_link }) => {
 	console.log(images)
   return (
     <div id="pokedex">
@@ -56,22 +56,26 @@ const Pokedex = ({ project_desc, images }) => {
 
       <Container className="project-links">
         <Row>
-          <Col className="d-flex justify-content-center">
-            <a href="https://github.com" rel="noopener noreferrer">
-              <h2>
-                Repo
-                <i className="fab fa-github-square ml-3" />
-              </h2>
-            </a>
-          </Col>
-          <Col className="d-flex justify-content-center">
-            <a href="https://github.com" rel="noopener noreferrer">
-              <h2>
-                Demo
-                <i className="fas fa-link ml-3" />
-              </h2>
-            </a>
-          </Col>
+          {github_link && (
+            <Col className="d-flex justify-content-center">
+              <a href={github_link} target="_blank" rel="noopener noreferrer">
+                <h2>
+                  Repo
+                  <i className="fab fa-github-square ml-3" />
+                </h2>
+              </a>
+            </Col>
+          )}
+          {demo_link && (
+            <Col className="d-flex justify-content-center">
+              <a href="https://github.com" rel="noopener noreferrer">
+                <h2>
+                  Demo
+                  <i className="fas fa-link ml-3" />
+                </h2>
+              </a>
+            </Col>
+          )}
         </Row>
       </Container>
     </div>
