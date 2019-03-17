@@ -15,8 +15,9 @@ const About = () => {
     tarbes: 'http://www.iut-tarbes.fr/Licence-Professionnelle,182.html?retour=back',
     wcs: 'https://wildcodeschool.fr/formation-developpeur-web-mobile/',
     commit42: 'https://www.commit42.fr/',
-    serigraphie: 'https://www.instagram.com/p/Bq2krq1FWb9/',
-    argentique: 'http://1.bp.blogspot.com/-mDY72l6Z1ng/T7skptxJS-I/AAAAAAAAAh8/tf25ZseJ2WY/s1600/Praktica+MTL+50.jpg'
+    serigraphie: 'https://www.instagram.com/seri_golo/',
+		argentique: 'http://1.bp.blogspot.com/-mDY72l6Z1ng/T7skptxJS-I/AAAAAAAAAh8/tf25ZseJ2WY/s1600/Praktica+MTL+50.jpg',
+		numerique: 'https://www.instagram.com/bourre_palettes/'
 
   }
   return (
@@ -44,10 +45,9 @@ const About = () => {
           </p>
           <p>
             Le web n’est pas la seule chose qui me fait vibrer, j’aime tout particulièrement l'illustration, 
-            la <a href={links.serigraphie} className="blue" target="_blank" rel="noopener noreferrer">sérigraphie</a> et la photographie (<a href={links.argentique} className="red" target="_blank" rel="noopener noreferrer">argentique</a> comme numérique). Étant assez adepte du DIY, 
+            la <a href={links.serigraphie} className="blue" target="_blank" rel="noopener noreferrer">sérigraphie</a> et la photographie (<a href={links.argentique} className="red" target="_blank" rel="noopener noreferrer">argentique</a> comme <a href={links.numerique} className="yellow" target="_blank" rel="noopener noreferrer">numérique</a>). Étant assez adepte du DIY, 
             j’ai monté mon propre atelier de sérigraphie tout récemment (commencé il y a 3 ans, il était temps...), 
-            vous trouverez donc aussi des projets print et photographiques sur mon portfolio avec de jolies clichés 
-            pris par mes soins.
+            vous trouverez donc aussi des projets print et photographiques sur mon portfolio incessement sous peu.
           </p>
           <p>
             N’hésitez pas à m’envoyer un message pour toute suggestion d’amélioration/d’idées ou me faire remonter 
