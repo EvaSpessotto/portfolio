@@ -5,7 +5,8 @@ import {
   FETCH_SINGLE_PROJECT,
   FETCH_SINGLE_PROJECT_SUCCESS,
 	FETCH_SINGLE_PROJECT_ERROR,
-	FIND_PROJECT
+	FIND_PROJECT,
+	CLEAR_STORE
 } from '../actions';
 
 const initialState = {
@@ -37,6 +38,9 @@ const reducer = (state = initialState, action ) => {
 		}
 		case FIND_PROJECT: {
 			return {...state, project: action.project}
+		}
+		case CLEAR_STORE: {
+			return {...state, project: null}
 		}
     default:
       return state;

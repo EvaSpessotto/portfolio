@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import '../../style/deadcandy.scss';
 import { Parallax } from 'react-parallax';
 
-const Project = ({ title, project_desc, images }) => {
+const Project = ({ project_desc, images }) => {
   return (
     <div id="deadcandy">
       <Container className="m-0 header" fluid>
@@ -15,7 +15,6 @@ const Project = ({ title, project_desc, images }) => {
                 strength={500}
               >
                 <div style={{ height: '600px' }} />
-                {/* <h1 id="title" className="mb-5">hello</h1> */}
             </Parallax>
           </Col>
         </Row>
@@ -45,8 +44,8 @@ const Project = ({ title, project_desc, images }) => {
                 </Col>
               </Row>
               <Row>
-                <Col className="d-flex justify-content-center">
-                  <img  src={images && images[3].path} className="img-fluid p-5 mt-5" alt="" />
+                <Col>
+                  <img  src={images && images[3].path} className="img-fluid w-100 p-5 mt-5" alt="" />
                 </Col>
               </Row>
             </Container>
@@ -56,10 +55,21 @@ const Project = ({ title, project_desc, images }) => {
 
       <Container className="project-links">
         <Row>
-          <Col className="d-flex justify-content-center ">
-            <h4 className="mr-3">Liens relatifs au projet: </h4>
-            <a href="https://github.com"><i className="fab fa-github-square fa-3x mr-3"></i></a>
-            <a href="https://github.com"><i className="fas fa-link fa-3x"></i></a>
+          <Col className="d-flex justify-content-center">
+            <a href="https://github.com" rel="noopener noreferrer">
+              <h2>
+                Repo
+                <i className="fab fa-github-square ml-3" />
+              </h2>
+            </a>
+          </Col>
+          <Col className="d-flex justify-content-center">
+            <a href="https://github.com" rel="noopener noreferrer">
+              <h2>
+                Demo
+                <i className="fas fa-link ml-3" />
+              </h2>
+            </a>
           </Col>
         </Row>
       </Container>
