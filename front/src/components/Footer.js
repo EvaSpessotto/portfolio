@@ -24,6 +24,11 @@ const Footer = () => {
           }
         </Col>
       </Row>
+			<Row >
+				<Col className="text-center">
+					<p className="small-text">{`Tous droits réservés © ${new Date().getFullYear()}`} | Fait avec <i className="fas fa-heart" /> par Eva Spessotto</p>
+				</Col>
+			</Row>
     </Container>
   )
 }
