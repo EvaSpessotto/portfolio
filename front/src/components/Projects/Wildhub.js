@@ -33,7 +33,7 @@ const Wildhub = ({ title, project_desc, images }) => {
         </Row>
       </Container>
 
-      <Container className="coloured-section p-5" fluid>
+      <Container className="coloured-section red p-5" fluid>
         <Row>
           <Col>
             <Container>
@@ -67,7 +67,7 @@ const Wildhub = ({ title, project_desc, images }) => {
         </Row>
       </Container>
 
-       <Container className="coloured-section" fluid>
+       <Container className="coloured-section red" fluid>
         <Row>
           <Col>
             <Container>

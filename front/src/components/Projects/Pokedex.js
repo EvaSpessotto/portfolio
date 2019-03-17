@@ -34,13 +34,13 @@ const Pokedex = ({ project_desc, images }) => {
         </Row>
       </Container>
 
-      <Container className="coloured-section p-5" fluid>
+      <Container className="coloured-section red p-5" fluid>
         <Row>
           <Col>
             <Container>
               <Row>
                 <Col lg="4" className="mt-3">
-                  <h2>Profile</h2>
+                  <h2>Pokemon</h2>
                   <div className="line"></div>
                 </Col>
               </Row>

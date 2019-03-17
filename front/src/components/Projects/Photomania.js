@@ -38,7 +38,7 @@ const Photomania = ({ title, project_desc, images }) => {
         </Row>
       </Container>
 
-      <Container className="coloured-section p-5" fluid>
+      <Container className="coloured-section blue p-5" fluid>
         <Row>
           <Col>
             <Container>

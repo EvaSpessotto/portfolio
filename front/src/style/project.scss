@@ -12,10 +12,19 @@
 .presentation {
 	margin-top: 10%;
 }
+	
+.red {
+	background-color: $red;
+}
+.yellow {
+	background-color: $yellow;
+}
+.blue{
+	background-color: $blue;
+}
 
 .coloured-section {
-  background-color: $blue;
-  margin-top: 10%;
+	margin-top: 10%;
 
   h2 {
     color: white;
@@ -29,6 +38,8 @@
     background-color: white;
   }
 }
+
+
 
 .multi-pages {
   margin-top: 10%;
