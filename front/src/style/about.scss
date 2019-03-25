@@ -40,18 +40,18 @@
       }
     }
 
-    .yellow{
+    .yellow-underline{
       @extend .underline;
       background-image: linear-gradient(86deg, rgba(255,180,0,1) 0%, rgba(255,180,0,1) 100%);
 
     }
 
-    .red{
+    .red-underline{
       @extend .underline;
       background-image: linear-gradient(86deg, rgba(198,0,0,1) 0%, rgba(198,0,0,1) 100%);
     }
 
-    .blue{
+    .blue-underline{
       @extend .underline;
       background-image: linear-gradient(86deg, rgba(0,133,155,1) 0%, rgba(0,133,155,1) 100%);
     }

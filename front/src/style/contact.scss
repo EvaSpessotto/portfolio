@@ -69,21 +69,21 @@ $time: 300ms;
     &:not(.name){
       margin-top: 50px;
     }
-    &.red{
+    &.red-line{
         :focus{
         border-color: $red!important;
         -webkit-box-shadow: none;
         box-shadow: none;
       }
     }
-    &.blue{
+    &.blue-line{
       :focus{
       border-color: $blue!important;
       -webkit-box-shadow: none;
       box-shadow: none;
       }
     }
-    &.yellow{
+    &.yellow-line{
       :focus{
       border-color: $yellow!important;
       -webkit-box-shadow: none;
