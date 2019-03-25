@@ -14,7 +14,7 @@ const ContactForm = ({ onChange, handleSubmit, form }) => {
       <Row className="mt-4">
         <Col lg="6"  className="offset-lg-3">
           <Form onSubmit={handleSubmit} >
-            <FormGroup className="name blue mt-4">
+            <FormGroup className="name blue-line mt-4">
               <Label for="name">nom</Label>
               <Input 
                 type="text" 
@@ -25,7 +25,7 @@ const ContactForm = ({ onChange, handleSubmit, form }) => {
               />
             </FormGroup>
 
-            <FormGroup className="red">
+            <FormGroup className="red-line">
               <Label for="email" >email</Label>
               <Input 
                 type="email" 
@@ -36,7 +36,7 @@ const ContactForm = ({ onChange, handleSubmit, form }) => {
               />
             </FormGroup>
      
-            <FormGroup className="yellow">
+            <FormGroup className="yellow-line">
               <Label for="subject" >sujet ?</Label>
               <Input 
                 type="text" 
@@ -47,7 +47,7 @@ const ContactForm = ({ onChange, handleSubmit, form }) => {
               />
             </FormGroup>
 
-            <FormGroup className="blue">
+            <FormGroup className="blue-line">
               <Label for="message" >message</Label>
               <Input 
                 type="textarea" 
