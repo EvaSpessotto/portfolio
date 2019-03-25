@@ -1,37 +1,68 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import { fetchSingleProject, fetchSingleProjectSuccess, fetchSingleProjectError } from '../actions';
-import { connect } from 'react-redux';
-import Project from '../components/Projects/Project';
-
+import React, { Component } from "react";
+import axios from "axios";
+import {
+  fetchSingleProject,
+  fetchSingleProjectSuccess,
+  fetchSingleProjectError,
+  findProject
+} from "../actions";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import NotFoundContainer from "../containers/NotFoundContainer";
+import Photomania from "../components/Projects/Photomania";
+import Wildhub from "../components/Projects/Wildhub";
+import Deadcandy from "../components/Projects/Deadcandy";
+import Mycontribution from "../components/Projects/Mycontribution";
+import Pokedex from '../components/Projects/Pokedex';
 
 class ProjectContainer extends Component {
 
   componentDidMount() {
     this.props.fetchSingleProject();
-    const id = this.props.match.url.substr(1);
-
-    axios.get(`/api/projects/${id}`)
+    const id = this.props.match.params.id;
+    axios
+      .get(`/api/projects/${id}`)
       .then(res => res.data)
       .then(project => this.props.fetchSingleProjectSuccess(project))
-      .catch(error => this.props.fetchSingleProjectError(error.response.data))
-  }
-  
+      .catch(error => this.props.fetchSingleProjectError(error.response));
+	}
+
   render() {
-    const singleProject = this.props.singleProject;
-    return (
-      <div>
-        <Project singleProject={singleProject} />
-      </div>
-    );
+		const project = this.props.project;
+    const lauchProject = (id) => {
+      switch (id) {
+        case "1":
+          return <Photomania {...project} />;
+        case "2":
+          return <Wildhub {...project} />;
+        case "3":
+          return <Deadcandy {...project} />;
+        case "4":
+					return <Mycontribution {...project} />;
+				case "5":
+					return <Pokedex {...project}  />;
+        default:
+          return <NotFoundContainer />;
+      }
+    };
+    return <div>{lauchProject(this.props.match.params.id)}</div>;
   }
 }
 const mapStateToProps = state => ({
-  singleProject: state.singleProject
+  projects: state.projects.projects,
+  project: state.projects.project
 });
 
 const mapDispatchToProps = {
-  fetchSingleProject, fetchSingleProjectSuccess, fetchSingleProjectError
+  fetchSingleProject,
+  fetchSingleProjectSuccess,
+  fetchSingleProjectError,
+  findProject
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProjectContainer);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(ProjectContainer)
+);

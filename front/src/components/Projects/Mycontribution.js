@@ -3,20 +3,20 @@ import { Container, Row, Col } from 'reactstrap';
 import '../../style/project.scss';
 import { Parallax } from 'react-parallax';
 
-const Project = (singleProject) => {
-  console.log(singleProject)
+const Mycontribution = ({ singleProject }) => {
   return (
     <div id="project">
+		mycontribution
       <Container className="m-0 header" fluid>
         <Row>
           <Col className="p-0 text-center">
               <Parallax
-                bgImage={'https://images.pexels.com/photos/1533720/pexels-photo-1533720.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'}
+                bgImage=""
                 bgImageAlt="the cat"
-                strength={600}
+                strength={500}
               >
-                <div style={{ height: '400px' }} />
-                <h1 id="title" className="mb-5">title</h1>
+                <div style={{ height: '600px' }} />
+                <h1 id="title" className="mb-5">hello</h1>
             </Parallax>
           </Col>
         </Row>
@@ -25,12 +25,12 @@ const Project = (singleProject) => {
       <Container>
         <Row className="presentation">
           <Col>
-            <p>Incididunt Lorem ipsum esse irure incididunt tempor est culpa veniam non magna. Velit anim esse nostrud dolor voluptate amet nostrud nulla. Irure nulla sunt amet amet esse dolor. Ad ullamco exercitation in qui ipsum aliquip cillum amet qui velit eiusmod do pariatur dolore. Esse mollit elit est tempor veniam enim anim deserunt. Velit consequat anim cillum deserunt cillum aliqua consequat deserunt labore laborum qui. Sint id aliquip enim anim voluptate amet sunt adipisicing consequat nostrud id.</p>
+            <p>oui</p>
           </Col>
         </Row>
         <Row className="all-devices mt-5">
           <Col>
-            <img src="https://via.placeholder.com/800x500" className="img-fluid w-100"  alt="" />
+            <img src="" className="img-fluid w-100"  alt="" />
           </Col>
         </Row>
       </Container>
@@ -47,7 +47,7 @@ const Project = (singleProject) => {
               </Row>
               <Row>
                 <Col className="d-flex justify-content-center">
-                  <img  src="https://via.placeholder.com/800x400" className="img-fluid p-5 mt-5" alt="" />
+                  <img  src="" className="img-fluid p-5 mt-5" alt="" />
                 </Col>
               </Row>
             </Container>
@@ -63,8 +63,8 @@ const Project = (singleProject) => {
           </Col>
         </Row>
         <Row >
-          <Col className="d-flex justify-content-center">
-            <img  src="https://via.placeholder.com/800x1000" className="img-fluid p-5" alt="" />
+          <Col className="d-flex justify-content-center" lg="12">
+            <img  src="" className="img-fluid p-5" alt="" />
           </Col>
         </Row>
       </Container>
@@ -102,4 +102,4 @@ const Project = (singleProject) => {
   )
 }
 
-export default (Project);
+export default Mycontribution;

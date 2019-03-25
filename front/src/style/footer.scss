@@ -37,5 +37,10 @@
         color: $red;
       }
     } 
-  }
+	}
+	
+	.small-text {
+		font-family: $font;
+		font-size: 0.8rem;
+	}
 }

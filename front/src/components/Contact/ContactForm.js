@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../style/contact.scss';
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 
-const ContactForm = () => {
+const ContactForm = ({ onChange, handleSubmit, form }) => {
   return (
     <Container id="contact-form">
       <Row>
@@ -13,51 +13,55 @@ const ContactForm = () => {
       </Row>
       <Row className="mt-4">
         <Col lg="6"  className="offset-lg-3">
-          <Form>
-            <FormGroup className="name blue mt-4">
+          <Form onSubmit={handleSubmit} >
+            <FormGroup className="name blue-line mt-4">
               <Label for="name">nom</Label>
               <Input 
                 type="text" 
                 name="name" 
+                onChange={onChange}
+                value={form.name}
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
 
-            <FormGroup className="red">
+            <FormGroup className="red-line">
               <Label for="email" >email</Label>
               <Input 
                 type="email" 
                 name="email" 
+                onChange={onChange}
+                value={form.email}
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
      
-            <FormGroup className="yellow">
+            <FormGroup className="yellow-line">
               <Label for="subject" >sujet ?</Label>
               <Input 
                 type="text" 
                 name="subject" 
+                onChange={onChange}
+                value={form.subject}
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
 
-            <FormGroup className="blue">
+            <FormGroup className="blue-line">
               <Label for="message" >message</Label>
               <Input 
                 type="textarea" 
                 name="message" 
+                onChange={onChange}
+                value={form.message}
                 rows="8"
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
+            <button className="submit-btn mt-5" type="submit">Envoyer</button>
           </Form>
         </Col>
       </Row>
-      <Row className="mt-5">
-          <Col className="d-flex justify-content-center">
-            <button className="submit-btn">Envoyer</button>
-          </Col>
-        </Row>
     </Container>
   );
 }
