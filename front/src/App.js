@@ -17,7 +17,7 @@ class App extends Component {
         <Navigation />
         <Switch>
           <Route exact path="/" component={HomeContainer} />
-          <Route path="/project/:id" component={ProjectContainer} />
+          <Route path="/project/:title" component={ProjectContainer} />
           <Route path="/a-propos" component={About} />
           <Route path="/contact" component={ContactContainer} />
           <Route component={NotFoundContainer} />
